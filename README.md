@@ -1,6 +1,5 @@
 # genomics-workshop
 
-This is information on the Data Carpentry Genomics workshop
+This is information on the Genomics Data workshop
 
-Website here: [http://www.datacarpentry.org/genomics-workshop](http://www.datacarpentry.org/genomics-workshop)
 
