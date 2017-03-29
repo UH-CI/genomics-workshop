@@ -1,27 +1,12 @@
----
-layout: lesson
-root: .
-lastupdated: Month Day, Year
-contributors: ["First Last", "First Last", "Pls Add Others"]
-maintainers: ["First Last", "First Last"]
-domain: Domain Name
-topic: Topic
-software:
-dataurl:
-status: Under Development
----
-
-# Data Carpentry Genomics Workshop
+# Bioinformatics Genomics Data Workshop
 
 =======
 
-Data Carpentry workshops are for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
+This workshop is for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
 
-The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization in spreadsheets, data organization, connecting to and using cloud computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline.
+The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization in spreadsheets, data organization, connecting to and using advanced computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline.
 
 Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
-
-Data Carpentry's aim is to teach researchers basic concepts, skills, and tools for working with data so that they can get more done in less time, and with less pain.
 
 ### Workshop structure
 
@@ -83,7 +68,7 @@ If you want to run your instance of the server used for this workshop, launch a 
 
 ### Requirements
 
-Data Carpentry's teaching is hands-on, so participants are encouraged to use
+This workshop is hands-on, so participants are encouraged to use
 their own computers to insure the proper setup of tools for an efficient workfl\
 ow.
 *These lessons assume no prior knowledge of the skills or tools*, but working
@@ -91,4 +76,3 @@ through this lesson requires working copies of the software described.
 To most effectively use these materials, please make sure to install everything
 *before* working through this workshop.
 
-<p><strong>Twitter</strong>: @datacarpentry
