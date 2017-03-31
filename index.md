@@ -1,6 +1,5 @@
 # Bioinformatics Genomics Data Workshop
 
-=======
 
 This workshop is for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
 
@@ -66,3 +65,17 @@ ow.
 through this lesson requires working copies of the software described.
 To most effectively use these materials, please make sure to install everything
 *before* working through this workshop.
+
+### Workshop Timeline
+| 9:00am | Introduction |
+| 9:10am | Introduce the Dataset |
+| 9:20am | SRA database |
+| 9:30am | Data tidiness module | 
+| 10:00am | Break  |
+| 10:15am | Command Line introduction - connect to UHHPC or Stampede? |
+| 11:00am | Data Wrangling module - This is bash scripting mostly |
+| Noon | Lunch |
+| 1:00pm | R |
+| 2:1pm: | Break |
+| 2:30pm | Agave/Togo |
+| 4:00pm | End |
