@@ -67,10 +67,11 @@ To most effectively use these materials, please make sure to install everything
 *before* working through this workshop.
 
 ### Workshop Timeline
+
 | 9:00am | Introduction |
 | 9:10am | Introduce the Dataset |
 | 9:20am | SRA database |
-| 9:30am | Data tidiness module | 
+| 9:30am | Data tidiness module |
 | 10:00am | Break  |
 | 10:15am | Command Line introduction - connect to UHHPC or Stampede? |
 | 11:00am | Data Wrangling module - This is bash scripting mostly |
