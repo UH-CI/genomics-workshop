@@ -40,12 +40,12 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [The file system](shell/01_the_filesystem.html)
 - [Searching files](shell/02_searching_files.html)
 
-**Module 5:** Data wrangling and processing
+**Data wrangling and processing**
 
-- [Project Setup](https://github.com/datacarpentry/organization-genomics/blob/gh-pages/lessons/01_intro_organization.md)
-- [Quality control of NGS data](https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/00-readQC.md)
-- [Automating a workflow](https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/01-automating_a_workflow.md)
-- [Variant calling workflow](https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/02-variant-calling-workflow.md) **Optional lesson**
+- [Project Setup](wrangling/00_organization.md)
+- [Quality control of NGS data](wrangling/01-readQC.md)
+- [Automating a workflow](wrangling/02-automating_a_workflow.md)
+- [Variant calling workflow](wrangling/03-variant-calling-workflow.md) **Optional lesson**
 
 **Module 5:** [R for data analysis and visualization](https://github.com/datacarpentry/R-genomics)
 
