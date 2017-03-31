@@ -10,7 +10,7 @@ Participants should bring their laptops and plan to participate actively. By the
 
 ### Workshop structure
 
-One dataset will be used throughout the workshop. We will start by introducing the dataset and the steps we'll go through for analysis. 
+One dataset will be used throughout the workshop. We will start by introducing the dataset and the steps we'll go through for analysis.
 
 ### Dataset
 
@@ -23,7 +23,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 All the software and data used in the workshop is on an Amazon AMI.
 
-If you want to run your instance of the server used for this workshop, launch a t2.medium instance with AMI in the **N. Virginia** region **ami-6516b30e**, available under "Community AMIs" in the Amazon EC2 Management Console. 
+If you want to run your instance of the server used for this workshop, launch a t2.medium instance with AMI in the **N. Virginia** region **ami-6516b30e**, available under "Community AMIs" in the Amazon EC2 Management Console.
 
 [Information on how to launch an instance](https://github.com/datacarpentry/cloud-genomics/blob/gh-pages/lessons/1.logging-onto-cloud.md)
 
@@ -31,11 +31,11 @@ If you want to run your instance of the server used for this workshop, launch a 
 
 
 
-**Module 1:** [Workshop Introduction](http://www.datacarpentry.org/introduction-genomics)
+Workshop Introduction](00-introduction.html)
 
 - [Overview of the workshop](http://www.datacarpentry.org/introduction-genomics/00-workshop-overview.html)
-- [Introducing the dataset and questions](http://www.datacarpentry.org/introduction-genomics/01-intro-to-dataset.html)
-- [Genomic data in the NCBI SRA database](http://www.datacarpentry.org/introduction-genomics/02-examining-sra-runtable.html)
+- [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
+- [Genomic data in the NCBI SRA database](dataset/introduction-genomics/02-examining-sra-runtable.html)
 
 **Module 2:** Data tidiness
 
@@ -75,4 +75,3 @@ ow.
 through this lesson requires working copies of the software described.
 To most effectively use these materials, please make sure to install everything
 *before* working through this workshop.
-
