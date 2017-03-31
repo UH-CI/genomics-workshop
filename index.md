@@ -6,7 +6,7 @@
 ![TACC Logo](https://www.tacc.utexas.edu/documents/1084364/1275944/tacc.png)
 
 
-This workshop is sponsored by the University of Hawaii Information Technology Service Cyberinfrastructure group, the Texas Advance Computing Center and Hawaii EPSCoR.
+This FREE workshop is sponsored by the University of Hawaii Information Technology Service Cyberinfrastructure group, the Texas Advance Computing Center and Hawaii EPSCoR.
 
 
 This workshop is for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
