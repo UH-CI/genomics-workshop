@@ -68,15 +68,15 @@ To most effectively use these materials, please make sure to install everything
 
 ### Workshop Timeline
 
-| 9:00am | Introduction |
-| 9:10am | Introduce the Dataset |
-| 9:20am | SRA database |
-| 9:30am | Data tidiness module |
+| 9:00am | [Introduction](00-overview.html) |
+| 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
+| 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
+| 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
 | 10:00am | Break  |
-| 10:15am | Command Line introduction - connect to UHHPC or Stampede? |
-| 11:00am | Data Wrangling module - This is bash scripting mostly |
+| 10:15am | [Introduction to the command line](shell/index.html) |
+| 11:00am | [Data Wrangling](wrangling/00-organization.md) |
 | Noon | Lunch |
-| 1:00pm | R |
+| 1:00pm | [Introduction to R](R/00-before.html) |
 | 2:1pm: | Break |
 | 2:30pm | Agave/Togo |
 | 4:00pm | End |
