@@ -36,8 +36,8 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 **Module 4:** [Introduction to the command line](http://www.datacarpentry.org/shell-genomics/lessons/)  
 
-- [The file system](http://www.datacarpentry.org/shell-genomics/lessons/01_the_filesystem.html)
-- [Searching files](http://www.datacarpentry.org/shell-genomics/lessons/02_searching_files.html)
+- [The file system](shell/01_the_filesystem.html)
+- [Searching files](shell/02_searching_files.html)
 
 **Module 5:** Data wrangling and processing
 
