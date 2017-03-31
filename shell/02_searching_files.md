@@ -1,9 +1,3 @@
---
-layout: page
-title: "The Shell"
-comments: true
-date: 2015-07-30
----
 
 # The Shell
 

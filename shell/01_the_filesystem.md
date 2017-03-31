@@ -1,9 +1,3 @@
----
-layout: page
-title: "The Shell"
-comments: true
-date: 2014-07-30
----
 
 # The Shell
 
@@ -25,7 +19,7 @@ knowing how to use the shell is transformative.
 * To use remote computers or cloud computing, you need to use the shell.
 
 
-![Automation](../img/gvng.jpg)
+![Automation](https://github.com/UH-CI/shell-genomics/blob/gh-pages/img/gvng.jpg)
 
   Unix is user-friendly. It's just very selective about who its friends are.
 
