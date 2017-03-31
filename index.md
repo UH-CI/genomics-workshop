@@ -1,5 +1,8 @@
 # Bioinformatics Genomics Data Workshop
+![EPSCoR Logo](http://www.hawaii.edu/epscor/wordpress/wp-content/uploads/2016/04/EPSCoR-Logo.placeholder200x65.png)
+![TACC Logo](https://www.tacc.utexas.edu/tacc-new-theme/images/logo.svg)
 This workshop is sponsored by the University of Hawaii Information Technology Service Cyberinfrastructure group, the Texas Advance Computing Center and Hawaii EPSCoR.
+
 
 This workshop is for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
 
@@ -17,7 +20,23 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 - [Overview of the dataset](dataset/01-intro-to-dataset.html)
 
-### Workshop overview
+### Workshop Timeline
+
+| 9:00am | [Introduction](00-overview.html) |
+| 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
+| 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
+| 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
+| 10:00am | Break  |
+| 10:15am | [Introduction to the command line](shell/index.html) |
+| 11:00am | [Data Wrangling](wrangling/00-organization.md) |
+| Noon | Lunch |
+| 1:00pm | [Introduction to R](R/00-before.html) |
+| 2:1pm: | Break |
+| 2:30pm | Agave/Togo |
+| 4:00pm | End |
+
+### Workshop Materials
+
 - [Overview](00-overview.html)
 - [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
 - [Genomic data in the NCBI SRA database](dataset/02-examining-sra-runtable.html)
@@ -59,24 +78,8 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 ### Requirements
 
 This workshop is hands-on, so participants are encouraged to use
-their own computers to insure the proper setup of tools for an efficient workfl\
-ow.
+their own computers to insure the proper setup of tools for an efficient workflow.
 *These lessons assume no prior knowledge of the skills or tools*, but working
 through this lesson requires working copies of the software described.
 To most effectively use these materials, please make sure to install everything
 *before* working through this workshop.
-
-### Workshop Timeline
-
-| 9:00am | [Introduction](00-overview.html) |
-| 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
-| 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
-| 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
-| 10:00am | Break  |
-| 10:15am | [Introduction to the command line](shell/index.html) |
-| 11:00am | [Data Wrangling](wrangling/00-organization.md) |
-| Noon | Lunch |
-| 1:00pm | [Introduction to R](R/00-before.html) |
-| 2:1pm: | Break |
-| 2:30pm | Agave/Togo |
-| 4:00pm | End |
