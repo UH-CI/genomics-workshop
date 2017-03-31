@@ -16,26 +16,17 @@ One dataset will be used throughout the workshop. We will start by introducing t
 
 In this workshop we're using data from Blount et al 2012 paper from Dr. Richard Lenski's Long Term Evolution Experiment.  
 
-- [Overview of the dataset](http://www.datacarpentry.org/introduction-genomics/01-intro-to-dataset.html)
-
-
-### Amazon instance for workshop
-
-All the software and data used in the workshop is on an Amazon AMI.
-
-If you want to run your instance of the server used for this workshop, launch a t2.medium instance with AMI in the **N. Virginia** region **ami-6516b30e**, available under "Community AMIs" in the Amazon EC2 Management Console.
-
-[Information on how to launch an instance](https://github.com/datacarpentry/cloud-genomics/blob/gh-pages/lessons/1.logging-onto-cloud.md)
+- [Overview of the dataset](dataset/01-intro-to-dataset.html)
 
 ### Workshop overview
 
 
 
-Workshop Introduction](00-introduction.html)
+[Workshop Introduction](00-introduction.html)
 
-- [Overview of the workshop](http://www.datacarpentry.org/introduction-genomics/00-workshop-overview.html)
+- [Overview of the workshop](00-overview.html)
 - [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
-- [Genomic data in the NCBI SRA database](dataset/introduction-genomics/02-examining-sra-runtable.html)
+- [Genomic data in the NCBI SRA database](dataset/02-examining-sra-runtable.html)
 
 **Module 2:** Data tidiness
 
