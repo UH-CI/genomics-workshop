@@ -42,9 +42,9 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 **Data wrangling and processing**
 
-- [Project Setup](wrangling/00_organization.md)
+- [Project Setup](wrangling/00-organization.md)
 - [Quality control of NGS data](wrangling/01-readQC.md)
-- [Automating a workflow](wrangling/02-automating_a_workflow.md)
+- [Automating a workflow](wrangling/02-automating-a-workflow.md)
 - [Variant calling workflow](wrangling/03-variant-calling-workflow.md) **Optional lesson**
 
 **Module 5:** [R for data analysis and visualization](https://github.com/datacarpentry/R-genomics)
