@@ -1,4 +1,4 @@
-Introduction to Genomics Data Carpentry workshop
+Introduction to Bioinformatics Genomics Data Workshop
 
 # Learning Objectives
 * Summarize the learning objectives for the workshop.
