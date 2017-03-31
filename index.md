@@ -1,6 +1,6 @@
-<center># Bioinformatics Genomics Data Workshop
-### April 12, 2017 9am-4pm
-### ITS Building rm 105</center>
+<center><h1>Bioinformatics Genomics Data Workshop</h1>
+<h2>April 12, 2017 9am-4pm</h2>
+<h2>ITS Building rm 105</h2></center>
 
 
 ![UH ITS CI Logo](img/ci-logo.png)
