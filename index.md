@@ -15,6 +15,8 @@ The focus of this workshop will be on working with genomics data and data manage
 
 Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 
+<button href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</button
+
 ### Workshop structure
 
 One dataset will be used throughout the workshop. We will start by introducing the dataset and the steps we'll go through for analysis.
@@ -31,12 +33,12 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 | 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
 | 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
 | 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
-| 10:00am | Break  |
+| 10:00am | Break - coffee and lite refreshments provided |
 | 10:15am | [Introduction to the command line](shell/index.html) |
 | 11:00am | [Data Wrangling](wrangling/00-organization.md) |
-| Noon | Lunch |
+| Noon | Lunch  - on your own|
 | 1:00pm | [Introduction to R](R/00-before.html) |
-| 2:1pm: | Break |
+| 2:1pm: | Break - coffee and lite refreshments provided|
 | 2:30pm | Agave/Togo |
 | 4:00pm | End |
 
@@ -52,9 +54,9 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - Think about and understand the types of data and metadata a sequencing experiment will generate
 - Gain a general understanding of data organization
 
-**Module 3:** [Using cloud computing for genomics](https://jasonjwilliamsny.github.io/cloud-genomics/)  
+**Using cloud advanced computing**  
 
-- understand what cloud computing is and why it's useful
+- understand what advanced computing is and why it's useful
 - log in to remote computing resources
 
 **Introduction to the command line**
