@@ -24,6 +24,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Genomic data in the NCBI SRA database](dataset/02-examining-sra-runtable.html)
 
 **Metadata and Data Organization**
+
 - [Metadata Lesson](data-tidiness/01-tidiness.html)
 - Think about and understand the types of data and metadata a sequencing experiment will generate
 - Gain a general understanding of data organization
