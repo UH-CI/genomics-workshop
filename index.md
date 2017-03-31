@@ -54,8 +54,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Starging With Data](R/02-starting-with-data.html)
 - [Data Frames](R/03-data-frames.html)
 - [Dplyr](R/04-dplyr.html)
-- [Data Visualization](R/05-data-visualization.html)
--
+- [Data Visualization With R](R/05-data-visualization.html)
 
 
 ### Requirements
