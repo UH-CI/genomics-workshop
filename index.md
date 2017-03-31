@@ -19,19 +19,12 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Overview of the dataset](dataset/01-intro-to-dataset.html)
 
 ### Workshop overview
-
-
-
-[Workshop Introduction](00-introduction.html)
-
-- [Overview of the workshop](00-overview.html)
+- [Overview](00-overview.html)
 - [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
 - [Genomic data in the NCBI SRA database](dataset/02-examining-sra-runtable.html)
 
-**Module 2:** Data tidiness
-
-[Version 1](http://www.datacarpentry.org/2015-08-24-ISU/lessons/00-intro-to-data-tidy.html) or [Version 2](https://jasonjwilliamsny.github.io/tidiness-genomics/)
-
+**Metadata and Data Organization**
+- [Metadata Lesson](data-tidiness/01-tidiness.html)
 - Think about and understand the types of data and metadata a sequencing experiment will generate
 - Gain a general understanding of data organization
 
