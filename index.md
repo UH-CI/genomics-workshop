@@ -17,7 +17,7 @@ The focus of this workshop will be on working with genomics data and data manage
 
 Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 
-<button href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</button>
+<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</a>
 
 ### Workshop structure
 
