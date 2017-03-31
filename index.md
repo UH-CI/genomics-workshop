@@ -47,9 +47,15 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Automating a workflow](wrangling/02-automating-a-workflow.md)
 - [Variant calling workflow](wrangling/03-variant-calling-workflow.md) **Optional lesson**
 
-**Module 5:** [R for data analysis and visualization](https://github.com/datacarpentry/R-genomics)
+**R for data analysis and visualization**
 
-- importing data in to R and using it for analysis and visualization
+- [Before Getting Started](R/00-before.html)
+- [Introduction to R](R/01-intro.html)
+- [Starging With Data](R/02-starting-with-data.html)
+- [Data Frames](R/03-data-frames.html)
+- [Dplyr](R/04-dplyr.html)
+- [Data Visualization](R/05-data-visualization.html)
+-
 
 
 ### Requirements
