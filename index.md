@@ -3,9 +3,9 @@
 <h2> Information Technology Center Room 105A/B, UH Manoa</h2></center>
 
 
-![UH ITS CI Logo](img/ci-logo.png)
-![EPSCoR Logo](http://www.hawaii.edu/epscor/wordpress/wp-content/uploads/2016/04/EPSCoR-Logo.placeholder200x65.png)
-![TACC Logo](https://www.tacc.utexas.edu/documents/1084364/1275944/tacc.png)
+![UH ITS CI Logo](img/ci-logo.png =200x)
+![EPSCoR Logo](http://www.hawaii.edu/epscor/wordpress/wp-content/uploads/2016/04/EPSCoR-Logo.placeholder200x65.png =200x)
+![TACC Logo](https://www.tacc.utexas.edu/documents/1084364/1275944/tacc.png =200x)
 
 
 This FREE workshop is sponsored by the University of Hawai'i Information Technology Service Cyberinfrastructure group, the Texas Advance Computing Center and Hawaii EPSCoR.
