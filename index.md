@@ -1,22 +1,22 @@
 <center><h1>Bioinformatics Genomics Data Workshop</h1>
 <h2>April 12, 2017 9am-4pm</h2>
 <h2> Information Technology Center Room 105A/B, UH Manoa</h2></center>
-
+<center>
 <img src="img/ci-logo.png" alt="Drawing" style="height: 100px;"/>
 <img src="http://www.hawaii.edu/epscor/wordpress/wp-content/uploads/2016/04/EPSCoR-Logo.placeholder200x65.png" alt="Drawing" style="height: 100px;"/>
 <img src="https://www.tacc.utexas.edu/documents/1084364/1275944/tacc.png" alt="Drawing" style="height:100px;"/>
-
+</center>
 This FREE workshop is sponsored by the University of Hawai'i Information Technology Service Cyberinfrastructure group, the Texas Advance Computing Center and Hawaii EPSCoR.
 
 
 This workshop is for any researcher who has data they want to analyze , and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
 
-The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization, data organization, connecting to and using advanced computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline.
+The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization, data organization, connecting to and using advanced computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 
-Participants should bring their laptops and plan to participate actively. Laptops will require a terminal application for accessing compute resources - Linux and Mac machine have this already, for Windows machines we recommend the free home version of [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html) By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
+Participants should bring their laptops and plan to participate actively. Laptops will require a terminal application for accessing compute resources - Linux and Mac machine have this already, for Windows machines we recommend the free home version of [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html).  We will also be using jupyter notebooks- at the moment Microsoft is offering free [Azure hosted jupyter notebooks](https://notebooks.azure.com) so please create a Microsoft account prior to the workshop if you do not have one already.
 
 <center><h1><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</a></h1></center>
-Please note that registration is limited to 40 attendees.
+<center>Please note that registration is limited to 40 attendees.</center>
 ### Workshop structure
 
 One dataset will be used throughout the workshop. We will start by introducing the dataset and the steps we'll go through for analysis.
