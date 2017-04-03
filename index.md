@@ -13,7 +13,7 @@ This workshop is for any researcher who has data they want to analyze , and no p
 
 The focus of this workshop will be on working with genomics data and data management and analysis for genomics research. We will cover metadata organization, data organization, connecting to and using advanced computing, the command line for sequence quality control and bioinformatics workflows, and R for data analysis and visualization. We will not be teaching any particular bioinformatics tools, but the foundational skills that will allow you to conduct any analysis and analyze the output of a genomics pipeline.
 
-Participants should bring their laptops and plan to participate actively. Laptops will require a terminal application for accessing compute resources - Linux and Mac machine have this already, for Windows machines we recommend the free home version of [mobaxterm](http://mobaxterm.mobatek.net/download-home-edition.html) By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
+Participants should bring their laptops and plan to participate actively. Laptops will require a terminal application for accessing compute resources - Linux and Mac machine have this already, for Windows machines we recommend the free home version of [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html) By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 
 <center><h1><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</a></h1></center>
 Please note that registration is limited to 40 attendees.
@@ -29,15 +29,15 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 ### Workshop Timeline
 
-| 9:00am | [Introduction](#) |
-| 9:10am | [The Dataset](#) |
-| 9:20am | [SRA Database](#) |
-| 9:30am | [Metadata and Data Organization](#) |
+| 9:00am | Introduction |
+| 9:10am | The Dataset |
+| 9:20am | SRA Database |
+| 9:30am | Metadata and Data Organization |
 | 10:00am | Break - coffee and light refreshments provided |
-| 10:15am | [Introduction to the command line](#) |
-| 11:00am | [Data Wrangling](#) |
+| 10:15am | Introduction to the command line |
+| 11:00am | Data Wrangling |
 | Noon | Lunch  - on your own|
-| 1:00pm | [Introduction to R](#) |
+| 1:00pm | Introduction to R |
 | 2:1pm: | Break - coffee and light refreshments provided|
 | 2:30pm | Agave/Togo |
 | 4:00pm | End |
