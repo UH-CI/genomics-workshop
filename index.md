@@ -1,7 +1,7 @@
 <center><h1>Bioinformatics Genomics Data Workshop</h1>
 <h2>Date: April 12, 2017 9am-4pm</h2>
 <h2>Location: Information Technology Center Room 105A/B, UH Manoa</h2></center>
-<h3>Presenters: John Fonner (TACC), Sean Cleveland(UH), Joe Stubbs (TACC), Rion Dooley (TACC), Ron Merrill (UH), David Schanzenbach (UH) and Jennifer Geis(UH)</h3>
+<h3>Presenters: John Fonner (TACC), Sean Cleveland(UH), Joe Stubbs (TACC), Rion Dooley (TACC), Ron Merrill (UH), David Schanzenbach (UH), Jennifer Geis(UH) and Ouida Meier(UH)</h3>
 <center>
 <img src="img/ci-logo.png" alt="Drawing" style="height: 100px;"/>
 <img src="http://www.hawaii.edu/epscor/wordpress/wp-content/uploads/2016/04/EPSCoR-Logo.placeholder200x65.png" alt="Drawing" style="height: 100px;"/>
