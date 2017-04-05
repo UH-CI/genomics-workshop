@@ -46,3 +46,5 @@ Blount, Z.D., Barrick, J.E., Davidson, C.J., Lenski, R.E.
 Genomic analysis of a key innovation in an experimental Escherichia coli population (2012) Nature, 489 (7417), pp. 513-518.  
 [Paper](Lenski_paper.pdf), [Supplemental materials](Lenski-s1.pdf)  
 Data on NCBI SRA: [http://www.ncbi.nlm.nih.gov/sra?term=SRA026813](http://www.ncbi.nlm.nih.gov/sra?term=SRA026813)
+
+[Examing The SRA Run Table](dataset/02-examing-sra-runtable.html)
