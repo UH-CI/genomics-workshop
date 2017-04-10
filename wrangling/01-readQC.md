@@ -91,14 +91,14 @@ The main functions of FastQC are
     $ cd
     # this command takes us to the home directory
 
-    $ mkdir dc_workshop
+    $ mkdir bio_workshop
     ```
 2. Create three subdirectories
 
    ```bash
-    mkdir dc_workshop/data
-    mkdir dc_workshop/docs
-    mkdir dc_workshop/results
+    mkdir bio_workshop/data
+    mkdir bio_workshop/docs
+    mkdir bio_workshop/results
 ```
 
   > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project.
