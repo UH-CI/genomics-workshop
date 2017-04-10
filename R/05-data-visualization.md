@@ -5,7 +5,7 @@ author: Data Carpentry contributors
 minutes: 30
 ---
 
-```{r, echo=FALSE}
+```
 metadata <- read.csv('./data/Ecoli_metadata.csv')
 ```
 
@@ -24,7 +24,7 @@ The mathematician Richard Hamming once said, "The purpose of computing is insigh
 When we are working with large sets of numbers it can be useful to display that information graphically. R has a number of built-in tools for basic graph types such as hisotgrams, scatter plots, bar charts, boxplots and much [more](http://www.statmethods.net/graphs/). We'll test a few of these out here on the `genome_size` vector from our metadata.
 
 
-```{r simplestats}
+```
 genome_size <- metadata$genome_size
 
 ```
@@ -32,27 +32,27 @@ genome_size <- metadata$genome_size
 ## Scatterplot
 Let's start with a **scatterplot**. A scatter plot provides a graphical view of the relationship between two sets of numbers. We don't have a variable in our metadata that is a continous variable, so there is nothing to plot it against but we can plot the values against their index values just to demonstrate the function.
 
-```{r scatter-plot1, fig.align='center'}
+```
 plot(genome_size)
 ```
 
 Each point represents a clone and the value on the x-axis is the clone index in the file, where the values on the y-axis correspond to the genome size for the clone. For any plot you can customize many features of your graphs (fonts, colors, axes, titles) through [graphic options](http://www.statmethods.net/advgraphs/parameters.html)
 For example, we can change the shape of the data point using `pch`.
 
-```{r, fig.align='center'}
+```
 plot(genome_size, pch=8)
 ```
 
 We can add a title to the plot by assigning a string to `main`:
 
-```{r, fig.align='center'}
+```
 plot(genome_size, pch=8, main="Scatter plot of genome sizes")
 ```
 
 ## Histogram
 Another way to visualize the distribution of genome sizes is to use a histogram, we can do this buy using the `hist` function:
 
-```{r, fig.align='center'}
+```
 hist(genome_size)
 ```
 
@@ -60,14 +60,14 @@ hist(genome_size)
 
 Using additional information from our metadata, we can use plots to compare values between the different citrate mutant status using a **boxplot**. A boxplot provides a graphical view of the median, quartiles, maximum, and minimum of a data set.
 
-```{r boxplot, fig.align='center'}
+```
 # Boxplot
 boxplot(genome_size ~ cit, metadata)
 ```
 
 Similar to the scatterplots above, we can pass in arguments to add in extras like plot title, axis labels and colors.
 
-```{r, fig.align='center'}
+```
 boxplot(genome_size ~ cit, metadata,  col=c("pink","purple", "darkgrey"),
         main="Average expression differences between celltypes", ylab="Expression")
 ```
@@ -79,7 +79,7 @@ More recently, R users have moved away from base graphic options and towards a p
 
 `ggplot` is best used on data in the `data.frame` form, so we will will work with `metadata` for the following figures. Let's start by loading the `ggplot2` library.
 
-```{r}
+```
 library(ggplot2)
 ```
 
@@ -87,7 +87,7 @@ The `ggplot()` function is used to initialize the basic graph structure, then we
 
 We will start with a blank plot and will find that you will get an error, because you need to add layers.
 
-```{r, eval=FALSE}
+```
 ggplot(metadata) # note the error
 ```
 
@@ -99,7 +99,7 @@ Geometric objects are the actual marks we put on a plot. Examples include:
 
 A plot **must have at least one geom**; there is no upper limit. You can add a geom to a plot using the + operator
 
-```{r, eval=FALSE}
+```
 ggplot(metadata) +
   geom_point() # note what happens here
 ```
@@ -114,7 +114,7 @@ Each type of geom usually has a **required set of aesthetics** to be set, and us
 
 To start, we will add position for the x- and y-axis since `geom_point` requires mappings for x and y, all others are optional.
 
-```{r, fig.align='center'}
+```
 ggplot(metadata) +
   geom_point(aes(x = sample, y= genome_size))
 ```
@@ -128,7 +128,7 @@ The labels on the x-axis are quite hard to read. To do this we need to add an ad
 
 There are built-in themes we can use, or we can adjust specific elements. For our figure we will change the x-axis labels to be plotted on a 45 degree angle with a small horizontal shift to avoid overlap. We will also add some additional aesthetics by mapping them to other variables in our dataframe. _For example, the color of the points will reflect the number of generations and the shape will reflect citrate mutant status._ The size of the points can be adjusted within the `geom_point` but does not need to be included in `aes()` since the value is not mapping to a variable.
 
-```{r, fig.align='center'}
+```
 ggplot(metadata) +
   geom_point(aes(x = sample, y= genome_size, color = generation, shape = cit), size = rel(3.0)) +
   theme(axis.text.x = element_text(angle=45, hjust=1))
@@ -138,7 +138,7 @@ ggplot(metadata) +
 
 To plot a histogram we require another geometric object `geom_bar`, which requires a statistical transformation. Some plot types (such as scatterplots) do not require transformations, each point is plotted at x and y coordinates equal to the original value. Other plots, such as boxplots, histograms, prediction lines etc. need to be transformed, and usually has a default statistic that can be changed via the `stat_bin` argument.
 
-```{r, eval=FALSE}
+```
 ggplot(metadata) +
   geom_bar(aes(x = genome_size))
 
@@ -146,7 +146,7 @@ ggplot(metadata) +
 
 Try plotting with the default value and compare it to the plot using the binwidth values. How do they differ?
 
-```{r, fig.align='center'}
+```
 ggplot(metadata) +
   geom_bar(aes(x = genome_size), stat = "bin", binwidth=0.05)
 
@@ -176,7 +176,7 @@ There are two ways in which figures and plots can be output to a file (rather th
 Initialize a plot that will be written directly to a file using `pdf`, `png` etc. Within the function you will need to specify a name for your image, and the with and height (optional). Then create a plot using the usual functions in R. Finally, close the file using the `dev.off()` function. There are also `bmp`, `tiff`, and `jpeg` functions, though the jpeg function has proven less stable than the others.
 
 
-```{r, eval=FALSE}
+```
 pdf("figure/boxplot.pdf")
 
 ggplot(example_data) +
