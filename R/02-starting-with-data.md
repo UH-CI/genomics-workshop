@@ -13,7 +13,7 @@
 
 # Looking at Metadata
 
-```{r, echo=FALSE, purl=TRUE}
+```
 # Looking at metadata
 ```
 
@@ -41,7 +41,7 @@ The metadata file required for this lesson can be [downloaded directly here](htt
 
 You are now ready to load the data. We are going to use the R function  `read.csv()` to load the data file into memory (as a `data.frame`):
 
-```{r, eval=TRUE,  purl=FALSE}
+```
 metadata <- read.csv('data/Ecoli_metadata.csv')
 ```
 
@@ -52,13 +52,13 @@ variable's value: `metadata`
 Alternatively, wrapping an assignment in parentheses will perform the assignment
 and display it at the same time.
 
-```{r, eval = TRUE, purl = FALSE}
+```
 (metadata <- read.csv('data/Ecoli_metadata.csv'))
 ```
 
 Wow... that was a lot of output. At least it means the data loaded properly. Let's check the top (the first 6 lines) of this `data.frame` using the function `head()`:
 
-```{r, results='show', purl=FALSE}
+```
 head(metadata)
 ```
 
@@ -89,7 +89,7 @@ can be set to `FALSE`:
 Let's now check the __str__ucture of this `data.frame` in more details with the
 function `str()`:
 
-```{r, purl=FALSE}
+```
 str(metadata)
 ```
 
@@ -137,7 +137,7 @@ therefore require some attention.
 
 ## Factors
 
-```{r, echo=FALSE, purl=TRUE}
+```
 ### Factors
 ```
 
@@ -150,7 +150,7 @@ actually integers under the hood, and you need to be careful when treating them
 like strings.
 
 In the data frame we just imported, let's do
-```{r, purl=TRUE}
+```
 str(metadata)
 ```
 
@@ -168,7 +168,7 @@ For instance, we see that `cit` is a Factor w/ 3 levels, `minus`, `plus` and `un
 You can check this by using the function `levels()`, and check the
 number of levels using `nlevels()`:
 
-```{r, purl=FALSE, eval=FALSE}
+```
 levels(citrate)
 nlevels(citrate)
 ```

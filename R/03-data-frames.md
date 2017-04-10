@@ -5,12 +5,12 @@ author: Data Carpentry contributors
 minutes: 30
 ---
 
-```{r, echo=FALSE, purl=FALSE, message = FALSE}
+```
 # source("setup.R")
 metadata <- read.csv("data/Ecoli_metadata.csv")
 ```
 
-```{r, echo=FALSE, purl=TRUE}
+```
 ## The data.frame class
 ```
 
@@ -72,7 +72,7 @@ str(example_data)
 
 # Indexing and sequences (within a vector)
 
-```{r, echo=FALSE, purl=TRUE}
+```
 ## Indexing and sequences
 ```
 
@@ -113,7 +113,7 @@ Our metadata data frame has rows and columns (it has 2 dimensions), if we want t
 extract some specific data from it, we need to specify the "coordinates" we want
 from it. Row numbers come first, followed by column numbers (i.e. [row, column]).
 
-```{r, purl=FALSE, eval=FALSE}
+```
 metadata[1, 2]   # first element in the 2nd column of the data frame
 metadata[1, 6]   # first element in the 6th column
 metadata[1:3, 7] # first three elements in the 7th column
@@ -150,20 +150,20 @@ sign. In this case, the entire column is a vector. You can use
 `names(metadata)` or `colnames(metadata)` to remind yourself of the column names.
 For instance, to extract all the strain information from our datasets:
 
-```{r, eval=FALSE}
+```
 metadata$strain
 ```
 
 In some cases, you may way to select more than one column. You can do this using
 the square brackets. Suppose we wanted strain and clade information:
 
-```{r, eval=FALSE}
+```
 metadata[, c("strain", "clade")]
 ```
 
 You can even access columns by column name _and_ select specific rows of interest. For example, if we wanted the strain and clade of just rows
 4 through 7, we could do:
 
-```{r, eval=FALSE}
+```
 metadata[4:7, c("strain", "clade")]
 ```

@@ -4,7 +4,7 @@ title: Aggregating and analyzing data with dplyr
 author: Data Carpentry contributors
 ---
 
-```{r, echo=FALSE, purl=FALSE, message = FALSE}
+```
 # source("setup.R")
 metadata <- read.csv("data/Ecoli_metadata.csv")
 ```
@@ -32,7 +32,7 @@ stuff in R. The functions we've been using, like `str()`, come built into R;
 packages give you access to more functions. You need to install a package and
 then load it to be able to use it.
 
-```{r, eval = FALSE, purl = FALSE}
+```
 install.packages("dplyr") ## install
 ```
 
@@ -40,7 +40,7 @@ You might get asked to choose a CRAN mirror -- this is basically asking you to
 choose a site to download the package from. The choice doesn't matter too much;
 I'd recommend choosing the RStudio mirror.
 
-```{r, message = FALSE, purl = FALSE}
+```
 library("dplyr")          ## load
 ```
 
@@ -72,13 +72,13 @@ We're going to learn some of the most common `dplyr` functions: `select()`,
 data frame, use `select()`. The first argument to this function is the data
 frame (`metadata`), and the subsequent arguments are the columns to keep.
 
-```{r, results = 'hide', purl = FALSE}
+```
 select(metadata, sample, clade, cit, genome_size)
 ```
 
 To choose rows, use `filter()`:
 
-```{r, purl = FALSE}
+```
 filter(metadata, cit == "plus")
 ```
 
@@ -96,7 +96,7 @@ useful when you need to many things to the same data set.  Pipes in R look like
 `%>%` and are made available via the `magrittr` package installed as
 part of `dplyr`.
 
-```{r, purl = FALSE}
+```
 metadata %>%
   filter(cit == "plus") %>%
   select(sample, generation, clade)
@@ -111,7 +111,7 @@ as an argument to these functions anymore.
 If we wanted to create a new object with this smaller version of the data we
 could do so by assigning it a new name:
 
-```{r, purl = FALSE}
+```
 meta_citplus <- metadata %>%
   filter(cit == "plus") %>%
   select(sample, generation, clade)
@@ -132,7 +132,7 @@ columns. For this we'll use `mutate()`.
 
 To create a new column of genome size in bp:
 
-```{r, purl = FALSE, eval=FALSE}
+```
 metadata %>%
   mutate(genome_bp = genome_size *1e6)
 ```
@@ -141,7 +141,7 @@ If this runs off your screen and you just want to see the first few rows, you
 can use a pipe to view the `head()` of the data (pipes work with non-dplyr
 functions too, as long as the `dplyr` or `magrittr` packages are loaded).
 
-```{r, purl = FALSE, eval=FALSE}
+```
 metadata %>%
   mutate(genome_bp = genome_size *1e6) %>%
   head
@@ -150,7 +150,7 @@ metadata %>%
 The row has a NA value for clade, so if we wanted to remove those we could
 insert a `filter()` in this chain:
 
-```{r, purl = FALSE, eval=FALSE}
+```
 metadata %>%
   mutate(genome_bp = genome_size *1e6) %>%
   filter(!is.na(clade)) %>%
@@ -169,7 +169,7 @@ then combine the results. `dplyr` makes this very easy through the use of the
 operations can be run. For example, if we wanted to group by citrate-using mutant status and find the
 number of rows of data for each status, we would do:
 
-```{r, purl = FALSE}
+```
 metadata %>%
   group_by(cit) %>%
   tally()
@@ -180,7 +180,7 @@ There are several different summary statistics that can be generated from our da
 `group_by()` is often used together with `summarize()` which collapses each
 group into a single-row summary of that group. `summarize()` can then be used to apply a function such as those that compute simple stats to give an overview for the group. So to view mean `genome_size` by mutant status:
 
-```{r, purl = FALSE}
+```
 metadata %>%
   group_by(cit) %>%
   summarize(mean_size = mean(genome_size, na.rm = TRUE))
@@ -188,7 +188,7 @@ metadata %>%
 
 You can group by multiple columns too:
 
-```{r, purl = FALSE}
+```
 metadata %>%
   group_by(cit, clade) %>%
   summarize(mean_size = mean(genome_size, na.rm = TRUE))
@@ -197,7 +197,7 @@ metadata %>%
 
 Looks like for one of these clones, the clade is missing. We could then discard those rows using `filter()`:
 
-```{r, purl = FALSE, eval=FALSE}
+```
 metadata %>%
   group_by(cit, clade) %>%
   summarize(mean_size = mean(genome_size, na.rm = TRUE)) %>%
@@ -211,7 +211,7 @@ automatically show tons of data going off the screen.
 
 You can also summarize multiple variables at the same time:
 
-```{r, purl = FALSE, eval=FALSE}
+```
 metadata %>%
   group_by(cit, clade) %>%
   summarize(mean_size = mean(genome_size, na.rm = TRUE),

@@ -5,9 +5,6 @@ author: Data Carpentry contributors
 minutes: 45
 ---
 
-```{r, echo=FALSE, purl=FALSE}
-knitr::opts_chunk$set(results='hide', fig.path='img/r-lesson-')
-```
 
 ------------
 
@@ -37,27 +34,27 @@ _Start by showing an example of a script_
 
 ## Creating objects
 
-```{r, echo=FALSE, purl=TRUE}
+```
 ### Creating objects (assignments)
 ```
 
 You can get output from R simply by typing in math in the console
 
-```{r, purl=FALSE}
+```
 3 + 5
 12/7
 ```
 
 We can also comment what it is we're doing
 
-```{r, purl=FALSE}
+```
 # I am adding 3 and 5. R is fun!
 3+5
 ```
 
 What happens if we do that same command with the # sign in the front?
 
-```{r, purl=FALSE, eval=FALSE}
+```
 I am adding 3 and 5. R is fun!
 3+5
 ```
@@ -80,7 +77,7 @@ assignment operator `<-` and the value we want to give it.
 For instance, instead of adding 3 + 5, we can assign those
 values to objects and then add them.
 
-```{r, purl=FALSE}
+```
 # assign 3 to a
 a <- 3
 # assign 5 to b
@@ -177,7 +174,7 @@ specific, simply change the argument yourself with a value of your choice.
 
 Let's try a function that can take multiple arguments `round`.
 
-```{r, results='show'}
+```
 round(3.14159)
 ```
 
@@ -187,11 +184,11 @@ how to do that by getting information about the `round` function.
 We can use `args(round)` or look at the
 help for this function using `?round`.
 
-```{r, results='show'}
+```
 args(round)
 ```
 
-```{r, eval=FALSE}
+```
 ?round
 ```
 
@@ -199,13 +196,13 @@ args(round)
 We see that if we want a different number of digits, we can
 type `digits=2` or however many we want.
 
-```{r, results='show'}
+```
 round(3.14159, digits=2)
 ```
 
 If you provide the arguments in the exact same order as they are defined you don't have to name them:
 
-```{r, results='show'}
+```
 round(3.14159, 2)
 ```
 
@@ -225,7 +222,7 @@ We're going to work with genome lengths.
 
 ## Solution
 
-```{r, purl=FALSE}
+```
 (genome_length_mb <- 4.6)
 genome_length_mb
 ```
@@ -239,7 +236,7 @@ genome length in Mb by 978.
 
 ### Solution
 
-```{r, purl=FALSE}
+```
 genome_length_mb / 978.0
 ```
 
@@ -253,7 +250,7 @@ genome.
 
 ### Solution
 
-```{r, purl=FALSE}
+```
 genome_length_mb <- 3000.0
 genome_length_mb / 978.0
 ```
@@ -261,13 +258,13 @@ genome_length_mb / 978.0
 This means that assigning a value to one variable does not change the values of
 other variables.  For example, let's store the genome's weight in a variable.
 
-```{r, purl=FALSE}
+```
 genome_weight_pg <- genome_length_mb / 978.0
 ```
 
 and then change `genome_length_mb` to 100.
 
-```{r, purl=FALSE}
+```
 genome_length_mb <- 100
 ```
 
@@ -278,7 +275,7 @@ What do you think is the current content of the object `genome_weight_pg`? 3.06 
 
 ## Vectors and data types
 
-```{r, echo=FALSE, purl=TRUE}
+```
 ### Vectors and data types
 ```
 
@@ -287,14 +284,14 @@ the workhorse of R. It's basically just a list of values, mainly either numbers 
 characters. They're special lists that you can do math with. You can assign this list of values to a variable, just like you
 would for one item. For example we can create a vector of genome lengths:
 
-```{r, purl=FALSE}
+```
 glengths <- c(4.6, 3000, 50000)
 glengths
 ```
 
 A vector can also contain characters:
 
-```{r, purl=FALSE}
+```
 species <- c("ecoli", "human", "corn")
 species
 ```
@@ -302,7 +299,7 @@ species
 There are many functions that allow you to inspect the content of a
 vector. `length()` tells you how many elements are in a particular vector:
 
-```{r, purl=FALSE}
+```
 length(glengths)
 length(species)
 ```
@@ -310,13 +307,13 @@ length(species)
 
 You can also do math with whole vectors. For instance if we wanted to multiply the genome lengths of all the genomes in the list, we can do
 
-```{r, purl=FALSE}
+```
 5 * glengths
 ```
 
 or we can add the data in the two vectors together
 
-```{r, purl=FALSE}
+```
 new_lengths <- glengths + glengths
 new_lengths
 ```
@@ -328,7 +325,7 @@ There are few ways to figure out what's going on in a vector.
 
 `class()` indicates the class (the type of element) of an object:
 
-```{r, purl=FALSE}
+```
 class(glengths)
 class(species)
 ```
@@ -337,14 +334,14 @@ The function `str()` provides an overview of the object and the elements it
 contains. It is a really useful function when working with large and complex
 objects:
 
-```{r, purl=FALSE}
+```
 str(glengths)
 str(species)
 ```
 
 You can add elements to your vector simply by using the `c()` function:
 
-```{r, purl=FALSE}
+```
 lengths <- c(glengths, 90) # adding at the end
 lengths <- c(30, glengths) # adding at the beginning
 lengths
