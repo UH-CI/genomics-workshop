@@ -1,10 +1,3 @@
----
-layout: topic
-title: Introduction to R
-author: Data Carpentry contributors
-minutes: 45
----
-
 
 ------------
 
@@ -38,7 +31,7 @@ _Start by showing an example of a script_
 ### Creating objects (assignments)
 ```
 
-You can get output from R simply by typing in math in the console
+You can get output from R simply by typing in math in the cell - to run the cell you click the "Run" button (looks like play) or you can hold SHIFT+ENTER and Jupyter will execute the content of a cell.
 
 ```
 3 + 5
@@ -64,7 +57,7 @@ doesn't work. Now we're stuck over in the console. The
 `+` sign means that it's still waiting for input, so we
 can't type in a new command. To get out of this type `Esc`. This will work whenever you're stuck with that `+` sign.
 
-It's great that R is a glorified caluculator, but obviously
+It's great that R is a glorified calculator, but obviously
 we want to do more interesting things.
 
 To do useful and interesting things, we need to assign _values_ to
@@ -72,7 +65,6 @@ _objects_. To create objects, we need to give it a name followed by the
 assignment operator `<-` and the value we want to give it.
 
 ## Assignment operator
-
 
 For instance, instead of adding 3 + 5, we can assign those
 values to objects and then add them.
@@ -97,9 +89,6 @@ the left. So, after executing `x <- 3`, the value of `x` is `3`. The arrow can
 be read as 3 **goes into** `x`.  You can also use `=` for assignments but not in
 all contexts so it is good practice to use `<-` for assignments. `=` should only
 be used to specify the values of arguments in functions, see below.
-
-In RStudio, typing `Alt + -` (push `Alt`, the key next to your space bar at the
-same time as the `-` key) will write ` <- ` in a single keystroke.
 
 
 ### Exercise
@@ -191,7 +180,6 @@ args(round)
 ```
 ?round
 ```
-
 
 We see that if we want a different number of digits, we can
 type `digits=2` or however many we want.

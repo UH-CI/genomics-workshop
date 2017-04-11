@@ -13,9 +13,6 @@
 
 # Looking at Metadata
 
-```
-# Looking at metadata
-```
 
 We are studying a population of Escherichia coli (designated Ara-3), which were propagated for more than 40,000 generations in a glucose-limited minimal medium. This medium was supplemented with citrate which E. coli cannot metabolize in the aerobic conditions of the experiment. Sequencing of the populations at regular time points reveals that spontaneous citrate-using mutants (Cit+) appeared at around 31,000 generations. This metadata describes information on the Ara-3 clones and the columns represent:
 
@@ -33,16 +30,15 @@ We are studying a population of Escherichia coli (designated Ara-3), which were 
 
 
 
-The metadata file required for this lesson can be [downloaded directly here](https://raw.githubusercontent.com/datacarpentry/R-genomics/gh-pages/data/Ecoli_metadata.csv) or [viewed in Github](./data/Ecoli_metadata.csv).
+The metadata file required for this lesson can be [downloaded directly here](https://raw.githubusercontent.com/datacarpentry/R-genomics/gh-pages/data/Ecoli_metadata.csv).
 
-- First, make sure you are in the correct working directory by typing `getwd()`
-- Second, create a new subdirectory within this working directory called `data`
-- Third, move the just-downloaded `Ecoli_metadata.csv` file into this `data` directory
+- First, make sure you are in the correct working directory by typing `getwd()` - for Azure the data uploaded into the notebook will be in the current directory but get familar with this command for R-shell `setwd(path/of/directories)` is how to change the data directory when using R else where.
+- Second, upload the just-downloaded `Ecoli_metadata.csv` file into the notebook.
 
 You are now ready to load the data. We are going to use the R function  `read.csv()` to load the data file into memory (as a `data.frame`):
 
 ```
-metadata <- read.csv('data/Ecoli_metadata.csv')
+metadata <- read.csv('Ecoli_metadata.csv')
 ```
 
 This statement doesn't produce any output because assignment doesn't display
@@ -53,7 +49,7 @@ Alternatively, wrapping an assignment in parentheses will perform the assignment
 and display it at the same time.
 
 ```
-(metadata <- read.csv('data/Ecoli_metadata.csv'))
+(metadata <- read.csv('Ecoli_metadata.csv'))
 ```
 
 Wow... that was a lot of output. At least it means the data loaded properly. Let's check the top (the first 6 lines) of this `data.frame` using the function `head()`:
@@ -162,9 +158,7 @@ assumed to be a factor. Once created, factors can only contain a pre-defined set
 *levels*. By default, R always sorts *levels* in alphabetical order.
 
 For instance, we see that `cit` is a Factor w/ 3 levels, `minus`, `plus` and `unknown`.
-
 <!--
-
 You can check this by using the function `levels()`, and check the
 number of levels using `nlevels()`:
 
@@ -178,7 +172,7 @@ to specify the order because it is meaningful (e.g., "low", "medium", "high") or
 it is required by particular type of analysis. Additionally, specifying the
 order of the levels allows to compare levels:
 
-```{r, purl=FALSE, error=TRUE, eval=FALSE}
+```
 expression <- factor(c("low", "high", "medium", "high", "low", "medium", "high"))
 levels(expression)
 expression <- factor(expression, levels=c("low", "medium", "high"))
@@ -216,7 +210,7 @@ as.numeric(levels(f))[f]    ## The recommended way.
 The function `table()` tabulates observations and can be used to create
 bar plots quickly. For instance:
 
-```{r wrong-order, results='show', purl=TRUE}
+```
 ## Question: How can you recreate this plot but by having "control"
 ## being listed last instead of first?
 exprmt <- factor(c("treat1", "treat2", "treat1", "treat3", "treat1", "control",
@@ -226,7 +220,7 @@ barplot(table(exprmt))
 ```
 
 
-```{r correct-order, purl=FALSE}
+```
 exprmt <- factor(exprmt, levels=c("treat1", "treat2", "treat3", "control"))
 barplot(table(exprmt))
 ```

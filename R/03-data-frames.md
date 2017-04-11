@@ -1,13 +1,7 @@
----
-layout: topic
-title: More on data frames
-author: Data Carpentry contributors
-minutes: 30
----
+-
 
 ```
-# source("setup.R")
-metadata <- read.csv("data/Ecoli_metadata.csv")
+metadata <- read.csv("Ecoli_metadata.csv")
 ```
 
 ```

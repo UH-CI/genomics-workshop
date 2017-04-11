@@ -6,7 +6,7 @@ minutes: 30
 ---
 
 ```
-metadata <- read.csv('./data/Ecoli_metadata.csv')
+metadata <- read.csv('Ecoli_metadata.csv')
 ```
 
 > ## Learning Objectives
@@ -156,7 +156,7 @@ ggplot(metadata) +
 
 Now that we have all the required information on let's try plotting a boxplot similar to what we had done using the base plot functions at the start of this lesson. We can add some additional layers to include a plot title and change the axis labels. Explore the code below and all the different layers that we have added to understand what each layer contributes to the final graphic.
 
-```{r, fig.align='center'}
+```
 ggplot(metadata) +
   geom_boxplot(aes(x = cit, y = genome_size, fill = cit)) +
   ggtitle('Boxplot of genome size by citrate mutant type') +
@@ -171,7 +171,7 @@ ggplot(metadata) +
 
 ## Writing figures to file
 
-There are two ways in which figures and plots can be output to a file (rather than simply displaying on screen). The first (and easiest) is to export directly from the RStudio 'Plots' panel, by clicking on `Export` when the image is plotted. This will give you the option of `png` or `pdf` and selecting the directory to which you wish to save it to. The second option is to use R functions in the console, allowing you the flexibility to specify parameters to dictate the size and resolution of the output image. Some of the more popular formats include `pdf()`, `png`.
+Use R functions in the console, allowing you the flexibility to specify parameters to dictate the size and resolution of the output image. Some of the more popular formats include `pdf()`, `png`.
 
 Initialize a plot that will be written directly to a file using `pdf`, `png` etc. Within the function you will need to specify a name for your image, and the with and height (optional). Then create a plot using the usual functions in R. Finally, close the file using the `dev.off()` function. There are also `bmp`, `tiff`, and `jpeg` functions, though the jpeg function has proven less stable than the others.
 
@@ -192,9 +192,9 @@ ggplot(example_data) +
 dev.off()
 ```
 
-
+Note that ggplot also has the ggsave() function (http://docs.ggplot2.org/0.9.2.1/ggsave.html)
 
 
 Resources:
 ---------
-We have only scratched the surface here. To learn more, see the [ggplot reference site](http://docs.ggplot2.org/), and Winston Chang's excellent [Cookbook for R](http://wiki.stdout.org/rcookbook/Graphs/) site. Though slightly out of date, [ggplot2: Elegant Graphics for Data Anaysis](http://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403) is still the definative book on this subject. Much of the material here was adpapted from [Introduction to R graphics with ggplot2 Tutorial at IQSS](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html).
+We have only scratched the surface here. To learn more, see the [ggplot reference site](http://docs.ggplot2.org/), and Winston Chang's excellent [Cookbook for R](http://www.cookbook-r.com/Graphs/) site. Though slightly out of date, [ggplot2: Elegant Graphics for Data Anaysis](http://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403) is still the definative book on this subject. Much of the material here was adpapted from [Introduction to R graphics with ggplot2 Tutorial at IQSS](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html).

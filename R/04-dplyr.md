@@ -1,12 +1,7 @@
----
-layout: topic
-title: Aggregating and analyzing data with dplyr
-author: Data Carpentry contributors
----
 
 ```
 # source("setup.R")
-metadata <- read.csv("data/Ecoli_metadata.csv")
+metadata <- read.csv("Ecoli_metadata.csv")
 ```
 
 ------------
@@ -204,7 +199,7 @@ metadata %>%
   filter(!is.na(clade))
 ```
 
-All of a sudden this isn't running of the screen anymore. That's because `dplyr`
+All of a sudden this isn't running off the screen anymore. That's because `dplyr`
 has changed our `data.frame` to a `tbl_df`. This is a data structure that's very
 similar to a data frame; for our purposes the only difference is that it won't
 automatically show tons of data going off the screen.

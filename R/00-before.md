@@ -1,13 +1,3 @@
----
-layout: topic
-title: Before we start
-author: Data Carpentry contributors
-minutes: 15
----
-
-```{r, echo=FALSE, purl=FALSE}
-knitr::opts_chunk$set(results='hide', fig.path='img/r-lesson-')
-```
 
 ------------
 
@@ -21,51 +11,47 @@ knitr::opts_chunk$set(results='hide', fig.path='img/r-lesson-')
 
 ------------
 
-# Presentation of RStudio
+# Presentation of Azure Jupyter Notebooks
 
-Start RStudio -- Let's start by learning about our tool.
+Jupyter (formerly IPython), is a multi-lingual [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
 
-* Console, Scripts, Environments, Plots
-* Code and workflow are more reproducible if we can document everything that we
-  do.
-* Our end goal is not just to "do stuff" but to do it in a way that anyone can
-  easily and exactly replicate our workflow and results.
+Azure Notebooks is a free service that provides Jupyter notebooks along with supporting packages for R, Python and F# as a service. This means you can just login and get going since no installation/setup is necessary.
+
+What can you do with a Jupyter Notebooks
+
+* You can use Jupyter notebooks to write Python 2, Python 3 and R code or any of ~40 other languages interactively
+* You can do your research, do analysis, produce a report, save it as PDF, HTML, a notebook, etc.
+* You can hold a classroom or give a seminar with students following along in a copy of your Shared notebook
+* You make a code and workflow are reproducible
+
+Our end goal is not just to "do stuff" but to do it in a way that anyone can easily and exactly replicate our workflow and results. For more information or help on using  a Jupyter notebook http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb.
 
 # Before we get started
 
-* Under the `File` menu, click on `New project`, choose `New directory`, then
-  `Empty project`
-* Enter a name for this new folder, and choose a convenient location for
-  it. This will be your **working directory** for the rest of the day
-  (e.g., `~/data-carpentry`)
-* Click on "Create project"
-* Under the `Files` tab on the right of the screen, click on `New Folder` and
-  create a folder named `data` within your newly created working directory.
-  (e.g., `~/data-carpentry/data`)
-* Create a new R script (File > New File > R script) and save it in your working
-  directory (e.g. `data-carpentry-script.R`)
+You will need to have created a Microsoft account to use Azure notebooks if you did not already please go here https://notebooks.azure.com/ and signup for an account.
 
-Your working directory should now look like this:
+* Sign in to Azure Notebooks https://notebooks.azure.com/
+* Click the Libraries Menu item (upper left)
+* Click the "New Library" button and fill in the dialog with "bioworkshop" as the values for name and id and make the library private.
+* Click the "New" button and create a notebok named "uhbiogeoworkshop.ipynb" and select R as the language and click the blue "New" button - this will create a new Jupyter notebook.
+* In the table of notebooks your "uhbiogeoworkshop.ipynb" should be availabe if you click it it will open the notebook
 
-![How it should look like at the beginning of this lesson](img/r_starting_how_it_should_like.png)
-
+Now you have Jupyter notebook to interact with for todays workshop.
 
 # Interacting with R
 
-There are two main ways of interacting with R: using the console or by using
+There are three main ways of interacting with R: using the R-shell, Jupyter notebooks or by using
 script files (plain text files that contain your code).
 
-The console window (in RStudio, the bottom left panel) is the place where R is
+The R shell is the place where R is
 waiting for you to tell it what to do, and where it will show the results of a
-command.  You can type commands directly into the console, but they will be
-forgotten when you close the session. It is better to enter the commands in the
-script editor, and save the script. This way, you have a complete record of what
+command.  You can type commands directly into the shell, but they will be
+forgotten when you close the session. It is better to enter the commands in a Jypter notebook or
+script file, and save the script. This way, you have a complete record of what
 you did, you can easily show others how you did it and you can do it again later
-on if needed. You can copy-paste into the R console, but the Rstudio script
-editor allows you to 'send' the current line or the currently selected text to
-the R console using the `Ctrl-Enter` shortcut.
+on if needed.
 
-If R is ready to accept commands, the R console shows a `>` prompt. If it
+If R shell is ready to accept commands, the R console shows a `>` prompt. If it
 receives a command (by typing, copy-pasting or sent from the script editor using
 `Ctrl-Enter`), R will try to execute it, and when ready, show the results and
 come back with a new `>`-prompt to wait for new commands.
@@ -73,8 +59,7 @@ come back with a new `>`-prompt to wait for new commands.
 If R is still waiting for you to enter more data because it isn't complete yet,
 the console will show a `+` prompt. It means that you haven't finished entering
 a complete command. This is because you have not 'closed' a parenthesis or
-quotation. If you're in Rstudio and this happens, click inside the console
-window and press `Esc`; this should help you out of trouble.
+quotation.
 
 # Basics of R
 
@@ -100,6 +85,8 @@ to create a `data/` directory within your working directory that stores the raw
 data, and have a `data_output/` directory for intermediate datasets and a
 `figure_output/` directory for the plots you will generate.
 
+For Azure Notebooks all data uploaded is with the notebook so there is no folder structure - other implementations of Jupyter notebooks might access a file system.
+
 
 ## Seeking help
 
@@ -107,20 +94,20 @@ data, and have a `data_output/` directory for intermediate datasets and a
 
 If you need help with a specific function, let's say `barplot()`, you can type:
 
-```{r, eval=FALSE}
+```
 ?barplot
 ```
 
 If you just need to remind yourself of the names of the arguments, you can use:
 
-```{r, eval=FALSE}
+```
 args(lm)
 ```
 
 If the function is part of a package that is installed on your computer but
 don't remember which one, you can type:
 
-```{r, eval=FALSE}
+```
 ??geom_point
 ```
 
@@ -129,7 +116,7 @@ don't remember which one, you can type:
 If you are looking for a function to do a particular task, you can use
 `help.search()` (but only looks through the installed packages):
 
-```{r, eval=FALSE}
+```
 help.search("kruskal")
 ```
 
@@ -177,7 +164,7 @@ To share an object with someone else, if it's relatively small, you can use the
 function `dput()`. It will output R code that can be used to recreate the exact same
 object as the one in memory:
 
-```{r, results='show'}
+```
 dput(head(iris)) # iris is an example data.frame that comes with R
 ```
 
@@ -186,7 +173,7 @@ your script up to the point of the error (and after removing everything that is
 not relevant to your issue). Alternatively, in particular if your questions is
 not related to a `data.frame`, you can save any R object to a file:
 
-```{r, eval=FALSE}
+```
 saveRDS(iris, file="/tmp/iris.rds")
 ```
 
@@ -194,7 +181,7 @@ The content of this file is however not human readable and cannot be posted
 directly on stackoverflow. It can however be sent to someone by email who can read
 it with this command:
 
-```{r, eval=FALSE}
+```
 some_data <- readRDS(file="~/Downloads/iris.rds")
 ```
 
@@ -203,7 +190,7 @@ as it provides critical information about your platform, the versions of R and
 the packages that you are using, and other information that can be very helpful
 to understand your problem.
 
-```{r, results='show'}
+```
 sessionInfo()
 ```
 
