@@ -16,8 +16,8 @@ The focus will be on data management and analysis for genomics research. We will
 
 Participants should bring their laptops and plan to participate actively. Laptops will require a terminal application for accessing compute resources - Linux and Mac machine have this already, for Windows machines we recommend the free home version of [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html).  We will also be using jupyter notebooks- at the moment Microsoft is offering free [Azure hosted jupyter notebooks](https://notebooks.azure.com) so please create a Microsoft account prior to the workshop if you do not have one already.
 
-<center><h1><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfUalGtQGx8EPR3wuJ_EjAADytl4uyfdeLrvCu6nEKCL_nvKg/viewform?c=0&w=1"> Register For The Workshop</a></h1></center>
-<center>Please note that registration is limited to 40 attendees.</center>
+<center><h1 style="font-color:red">The Workshop is at capacity and is no longer accepting participants.  Please be on the look out for future opportunities.</h1></center>
+
 ### Workshop structure
 
 One dataset will be used throughout the workshop. We will start by introducing the dataset and the steps we'll go through for analysis.
