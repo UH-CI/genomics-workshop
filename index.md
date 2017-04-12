@@ -56,11 +56,6 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - Think about and understand the types of data and metadata a sequencing experiment will generate
 - Gain a general understanding of data organization
 
-**Using Advanced Computing**  
-
-- understand what advanced computing is and why it's useful
-- log in to remote computing resources
-
 **Introduction to the command line**
 
 - [Overview](shell/index.html)
