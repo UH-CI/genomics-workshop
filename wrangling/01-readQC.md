@@ -16,7 +16,20 @@ We use an interactive session via the SLURM job scheduler to get access to a com
 The below command will try and run an interactive session in the "bio_workshop" partition for 120 minutes on one node with 1 core and ~ 2GB of memory.  It runs the bash shell.  For this to work there has to be resources immediately available.  Additional information about srun can be found here [SLURM srun docs](http://www.schedmd.com/slurmdocs/srun.html)
 
 ```
-  srun -I -p bio_workshop -c 1 -t 120 ---mem 2200 --pty /bin/bash
+  srun -I -p bioworkshop -c 1 -t 120 --mem 2200 --pty /bin/bash
+```
+
+Notice that your terminal prompt no login says 'username@login-0001' but instead is 'username@prod2-XXXX' which means you are on a compute node.
+
+### Modules
+
+Modules are how we install software for all users on HPC systems in a way that allows multiple versions to be available without colliding.  To see what software is installed for everyone on the HPC use:
+```
+module avail
+```
+To be able to use one of the installed software packages you need to use:
+```
+module load full-package-name
 ```
 
 ## Details on the FASTQ format
@@ -91,7 +104,7 @@ The main functions of FastQC are
 * Offline operation to allow automated generation of reports without running the interactive application
 
 
-## Running FASTQC
+## Running FASTQC Excersie
 ### A. Stage your data
 
 1. Create a working directory for your analysis
@@ -110,7 +123,7 @@ The main functions of FastQC are
     mkdir bio_workshop/results
 ```
 
-###B. Run FastQC
+### B. Run FastQC
 
 1. Lets create a directory for our results:
 
@@ -120,16 +133,7 @@ The main functions of FastQC are
     ```
 To run the fastqc program, we need to load the software module on the UH ITS HPC.
 
-Modules are how we install software for all users on HPC systems in a way that allows multiple versions to be available without colliding.  To see what software is installed for everyone on the HPC use:
-```
-module avail
-```
-To be able to use one of the installed software packages you need to use:
-```
-module load full-package-name
-```
-
- To load the fastQC software use ``module load bioinfo/fastQC/0.11.4``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard to specify the output directory we use the -o flag (otherwise fastQC will put the results in the same directory as the fastq files it is analyzing).
+To load the fastQC software use ``module load bioinfo/fastQC/0.11.4``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard to specify the output directory we use the -o flag (otherwise fastQC will put the results in the same directory as the fastq files it is analyzing).
 2. Run FastQC on all fastq files in the directory
 
     ```bash
