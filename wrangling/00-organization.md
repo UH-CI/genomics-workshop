@@ -34,7 +34,7 @@ First, make sure that you are in your lus directory:
 ```bash
 $ pwd
 /home/username/lus
-# Hopefully you got the above output '/home/username'
+# Hopefully you got the above output '/home/username/lus'
 ```
 
 **Tip:** Remember, when we give a command, rather than copying and pasting, just type it out. Also the '$' indicates we are at the command prompt, do not include that in your command.
