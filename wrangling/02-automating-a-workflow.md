@@ -103,6 +103,6 @@ named read_qc.sh
 
 2) Run the script
 
-3) Bonus points: Use something you learned yesterday to save the output
+3) Bonus points: Use something you learned earlier to save the output
 of the script to a file while it is running.
 ****
