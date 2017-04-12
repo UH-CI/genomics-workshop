@@ -30,16 +30,16 @@ In this exercise we will setup a filesystem for the project we will be using ove
 
 Inspired by the guide below, we will start by create a directory that we can use for the rest of the workshop:
 
-First, make sure that you are in your home directory:
+First, make sure that you are in your lus directory:
 ```bash
 $ pwd
-/home/username
+/home/username/lus
 # Hopefully you got the above output '/home/username'
 ```
 
 **Tip:** Remember, when we give a command, rather than copying and pasting, just type it out. Also the '$' indicates we are at the command prompt, do not include that in your command.
 
-**Tip** If you were not in your home directory, the easiest way to get there is to enter the command ``cd`` which always returns you to home.
+**Tip** If you were not in your lus directory, the easiest way to get there is to enter the command ``cd ~/lus``
 
 Next, try making the following directories using the ``mkdir`` command
 
