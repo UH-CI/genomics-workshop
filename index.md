@@ -45,6 +45,8 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 | 2:30pm | [Agave/ToGo](#agave) |
 | 4:00pm | End |
 
+# Etherpad
+[https://public.etherpad-mozilla.org/p/UH-bioworkshop](https://public.etherpad-mozilla.org/p/UH-bioworkshop)
 
 ###Workshop Materials
 
@@ -75,7 +77,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 - [Before Getting Started](R/00-before.html)
 - [Introduction to R](R/01-intro.html)
-- [Starging With Data](R/02-starting-with-data.html)
+- [Starting With Data](R/02-starting-with-data.html)
 - [Data Frames](R/03-data-frames.html)
 - [Dplyr](R/04-dplyr.html)
 - [Data Visualization With R](R/05-data-visualization.html)
