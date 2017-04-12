@@ -34,10 +34,10 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 |--------|--------------------------------------------------|
 | 9:00am | [Introduction](00-overview.html) |
 | 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
-| 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
-| 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
+| 9:20am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
+| 9:30am | [Introduction to the command line ](shell/index.md) |
 | 10:00am | Break - coffee and light refreshments provided |
-| 10:15am | [Introduction to the command line ](shell/index.md) |
+| 10:15am | [Command line Continued](shell/index.md) |
 | 11:00am | [Data Wrangling](#wrangling) |
 | Noon | Lunch  - on your own|
 | 1:00pm | [Introduction to R](#r) |
@@ -49,7 +49,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 [https://public.etherpad-mozilla.org/p/UH-bioworkshop](https://public.etherpad-mozilla.org/p/UH-bioworkshop)
 
 
-### Workshop Materials
+## Workshop Materials
 
 - [Overview](00-overview.html)
 - [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
