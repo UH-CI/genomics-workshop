@@ -22,7 +22,7 @@ That is also the definition of pretty much any computer program.
 ```bash
 #!/bin/bash
 
-cd ~/dc_sample_data
+cd  /lus/scratch/workshop/dc_sampledata_lite/
 
 for file in untrimmed_fastq/*.fastq
 do
@@ -78,17 +78,11 @@ Now, let's do something real.  First, recall the code from our our fastqc
 workflow from this morning, with a few extra "echo" statements.
 
 ```bash
-cd ~/dc_workshop/data/untrimmed_fastq/
-
 echo "Running fastqc..."
-~/FastQC/fastqc *.fastq
-mkdir -p ~/dc_workshop/results/fastqc_untrimmed_reads
-
-echo "saving..."
-mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
-mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
-
-cd ~/dc_workshop/results/fastqc_untrimmed_reads/
+mkdir -p ~/lus/bio_workshop/results/fastqc_untrimmed_reads
+cd ~/lus/bio_workshop/results/fastqc_untrimmed_reads
+fastqc /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq/*.fastq -o .
+fastqc *.fastq -o .
 
 echo "Unzipping..."
 for zip in *.zip
@@ -97,7 +91,7 @@ do
 done
 
 echo "saving..."
-cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
+cat */summary.txt > ~/lus/bio_workshop/docs/fastqc_summaries.txt
 ```
 
 

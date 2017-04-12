@@ -1,5 +1,7 @@
 i# Lesson QC of Sequence Read Data
 
+add loading modules
+
 Quality Control of NGS Data
 ===================
 
@@ -88,8 +90,8 @@ The main functions of FastQC are
 1. Create a working directory for your analysis
 
     ```bash
-    $ cd
-    # this command takes us to the home directory
+    $ cd ~/lus
+    # this command takes us to your scratch directory
 
     $ mkdir bio_workshop
     ```
@@ -101,37 +103,20 @@ The main functions of FastQC are
     mkdir bio_workshop/results
 ```
 
-  > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project.
-3. Move our sample data to our working (home) directory
-
-   ```bash
-$ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
-```
-
 ###B. Run FastQC
 
-1. Navigate to the initial fastq dataset
+1. Lets create a directory for our results:
 
     ```bash
-    $ cd ~/dc_workshop/data/untrimmed_fastq/
+    mkdir bio_workshop/results/fastqc_untrimmed_reads
+    cd bio_workshop/results/fastqc_untrimmed_reads
     ```
-To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
+To run the fastqc program, we need to load the software module on the UH ITS HPC ``module load bioinfo/fastQC/0.11.4``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard to specify the output directory we use the -o flag (otherwise fastQC will put the results in the same directory as the fastq files it is analyzing).
 2. Run FastQC on all fastq files in the directory
 
     ```bash
-    $ ~/FastQC/fastqc *.fastq
+    $ fastqc_untrimmed_reads]$ fastqc /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq/*.fastq -o .
     ```
-Now, let's create a home for our results
-    ```bash
-    $ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
-    ```
-3. Next, move the files there (recall, we are still in ``~/dc_workshop/data/untrimmed_fastq/``)
-   ```bash
-    $ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
-    $ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
-    ```
-
-
 ### C. Results
 
 Let's examine the results in detail
@@ -139,10 +124,8 @@ Let's examine the results in detail
 1. Navigate to the results and view the directory contents
 
    ```bash
-$ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 $ ls
 ```
-
  > The zip files need to be unpacked with the 'unzip' program.  
 2. Use unzip to unzip the FastQC results:
    ```bash
@@ -171,12 +154,11 @@ When you check your history later, it will help your remember what you did!
 
 ### D. Document your work
 
-To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to ``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
+To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to ``~/lus/bio_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
 
 ```bash    
-cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
+cat */summary.txt > ~/lus/bio_workshop/docs/fastqc_summaries.txt
 ```
-
 
 ##How to clean reads using *Trimmomatic*
 ###A detailed explanation of features
@@ -207,27 +189,31 @@ A generic command for *Trimmomatic* looks like this:
 
 **java -jar trimmomatic-0.32.jar SE**
 
+On the UH ITS HPC is looks like this:
+
+** java -jar ${TRIM}/trimmomatic.jar SE**
+
 A complete command for *Trimmomatic* will look something like this:
 
-**java -jar trimmomatic-0.32.jar SE -threads 4 -phred64 SRR_1056.fastq SRR_1056_trimmed.fastq ILLUMINACLIP:SRR_adapters.fa SLIDINGWINDOW:4:20**
+**java -jar ${TRIM}/trimmomatic.jar  SE -threads 4 -phred64 SRR_1056.fastq SRR_1056_trimmed.fastq ILLUMINACLIP:SRR_adapters.fa SLIDINGWINDOW:4:20**
 
 This command tells *Trimmomatic* to run on a Single End file (``SRR_0156.fastq``, in this case), the output file will be called ``SRR_0156_trimmed.fastq``,  there is a file with Illumina adapters called ``SRR_adapters.fa``, and we are using a sliding window of size 4 that will remove bases with a phred score of below 20.
 
 
 ## Exercise - Running Trimmomatic
 
-1. Go to the untrimmed fastq data location:
+1. Load the trimmomatic module
 
    ```bash
-$ cd /home/dcuser/dc_workshop/data/untrimmed_fastq
+$ module load bioinfo/usadellab/trimmomatic/0.33.0
 ```
 
 The command line invocation for trimmomatic is more complicated.  This is where what you have been learning about accessing your command line history will start to become important.
 
-The general form of the command is:
+The general form of the command on the UH ITS HPC is:
 
    ```bash
-java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar inputfile outputfile OPTION:VALUE...
+$ java -jar ${TRIM}/trimmomatic.jar inputfile outputfile OPTION:VALUE...
 ```    
 'java -jar' calls the Java program, which is needed to run trimmomatic, which lives in a 'jar' file (trimmomatic-0.32.jar), a special kind of java archive that is often used for programs written in the Java programing language.  If you see a new program that ends in '.jar', you will know it is a java program that is executed 'java -jar program name'.  The 'SE' argument is a keyword that specifies we are working with single-end reads.
 
@@ -236,8 +222,8 @@ The next two arguments are input file and output file names.  These are then fol
 
 So, for the single fastq input file 'SRR098283.fastq', the command would be:
    ```bash
-$ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq \
-    SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+$ cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
+$ java -jar ${TRIM}/trimmomatic.jar SE SRR098283.fastq ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 
     TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
     Automatically using 2 threads
@@ -255,10 +241,11 @@ So that worked and we have a new fastq file.
 Now we know how to run trimmomatic but there is some good news and bad news.  One should always ask for the bad news first.  Trimmomatic only operates on one input file at a time and we have more than one input file.  The good news? We already know how to use a for loop to deal with this situation.
 
 ```bash
+$ cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
 $ for infile in *.fastq
     >do
     >outfile=$infile\_trim.fastq
-    >java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
+    >java -jar ${TRIM}/trimmomatic.jar SE $infile ~/lus/bio_workshop/results/fastqc_trimmed_results/$outfile SLIDINGWINDOW:4:20 MINLEN:20
     >done
 ```
 
