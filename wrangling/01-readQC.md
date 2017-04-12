@@ -115,7 +115,7 @@ To run the fastqc program, we need to load the software module on the UH ITS HPC
 2. Run FastQC on all fastq files in the directory
 
     ```bash
-    $ fastqc_untrimmed_reads]$ fastqc /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq/*.fastq -o .
+$ fastqc /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq/*.fastq -o .
     ```
 ### C. Results
 

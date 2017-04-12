@@ -17,7 +17,7 @@ Your future self will thank you.
 
 ##Exercise
 
-In this exercise we will setup a filesystem for the project we will be using over the next few days. We will also introduce you to some helpful shell commands/programs/tools:
+In this exercise we will setup a filesystem for the project we will be using over the next few hours. We will also introduce you to some helpful shell commands/programs/tools:
 
 * ``mkdir``
 * ``history``
@@ -33,8 +33,8 @@ Inspired by the guide below, we will start by create a directory that we can use
 First, make sure that you are in your home directory:
 ```bash
 $ pwd
-/home/user
-# Hopefully you got the above output '/home/user'
+/home/username
+# Hopefully you got the above output '/home/username'
 ```
 
 **Tip:** Remember, when we give a command, rather than copying and pasting, just type it out. Also the '$' indicates we are at the command prompt, do not include that in your command.
@@ -46,7 +46,6 @@ Next, try making the following directories using the ``mkdir`` command
 
 * bio_workshop
 * bio_workshop/docs
-* bio_workshop/data
 * bio_workshop/results
 
 
@@ -60,9 +59,7 @@ if you have created these directories, you should get the following output from 
 
 ```bash
 bio_workshop/:
-data  docs  results
-
-bio_workshop/data:
+docs  results
 
 bio_workshop/docs:
 

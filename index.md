@@ -33,17 +33,17 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 | 9:00am | Introduction |
 | 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
 | 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
-| 9:30am | Metadata and Data Organization |
+| 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
 | 10:00am | Break - coffee and light refreshments provided |
 | 10:15am | Introduction to the command line |
-| 11:00am | Data Wrangling |
+| 11:00am | [Data Wrangling] |
 | Noon | Lunch  - on your own|
 | 1:00pm | Introduction to R |
 | 2:1pm: | Break - coffee and light refreshments provided|
 | 2:30pm | Agave/Togo |
 | 4:00pm | End |
 
-<!--
+
 ### Workshop Materials
 
 - [Overview](00-overview.html)
@@ -72,7 +72,6 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Project Setup](wrangling/00-organization.md)
 - [Quality control of NGS data](wrangling/01-readQC.md)
 - [Automating a workflow](wrangling/02-automating-a-workflow.md)
-- [Variant calling workflow](wrangling/03-variant-calling-workflow.md) **Optional lesson**
 
 **R for data analysis and visualization**
 
@@ -82,6 +81,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Data Frames](R/03-data-frames.html)
 - [Dplyr](R/04-dplyr.html)
 - [Data Visualization With R](R/05-data-visualization.html)
+- [Scripting With R](R/06-r-script.html)
 
 
 ### Requirements
