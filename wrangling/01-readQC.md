@@ -183,8 +183,7 @@ To save a record, let's cat all fastqc summary.txts into one full_report.txt and
 cat */summary.txt > ~/lus/bio_workshop/docs/fastqc_summaries.txt
 ```
 
-##How to clean reads using *Trimmomatic*
-###A detailed explanation of features
+## How to clean reads using *Trimmomatic*
 
 Once we have an idea of the quality of our raw data, it is time to trim away adapters and filter out poor quality score reads. To accomplish this task we will use *Trimmomatic* [http://www.usadellab.org/cms/?page=trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
 
@@ -248,17 +247,17 @@ So, for the single fastq input file 'SRR098283.fastq', the command would be:
 $ cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
 $ java -jar ${TRIM}/trimmomatic.jar SE SRR098283.fastq ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 
-    TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
-    Automatically using 2 threads
-    Quality encoding detected as phred33
-    Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
-    TrimmomaticSE: Completed successfully
+TrimmomaticSE: Started with arguments: SRR098283.fastq /home/seanbc/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+Automatically using 16 threads
+Quality encoding detected as phred33
+Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
+TrimmomaticSE: Completed successfully
 ```
 So that worked and we have a new fastq file.
 
    ```bash
-    $ ls SRR098283*
-    SRR098283.fastq  SRR098283.fastq_trim.fastq
+    $ ls ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283*
+    ls ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq
 ```
 
 Now we know how to run trimmomatic but there is some good news and bad news.  One should always ask for the bad news first.  Trimmomatic only operates on one input file at a time and we have more than one input file.  The good news? We already know how to use a for loop to deal with this situation.
