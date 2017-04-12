@@ -1,4 +1,4 @@
-#Usefulness of R scripts
+# Usefulness of R scripts
 
 Besides being an amazing interactive tool for data analysis, R software commands can also be executed as scripts. This is useful for example when we need to work in large projects where different parts of the project needs to be implemented using different languages that are later glued together to form the final product.
 
@@ -11,7 +11,7 @@ and design your tasks following the Unix philosophy:
 Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface. — Doug McIlroy
 
 
-Basic R script
+# Basic R script
 
 A basic template for an R script is given by
 
@@ -39,7 +39,7 @@ Now go to your terminal and type chmod +x myscript.R to give the file execution 
 displayed on your terminal since the result is by default directed to stdout. We could have written the output of x to a file instead, of course. In order to do this just replace the print(x) statement by some writing command, as for example
 
 
-#Processing command-line arguments
+# Processing command-line arguments
 
 To accept argument from the command line inside the script the following line will read the arguments into a variable.
 ```
@@ -77,7 +77,7 @@ mygraph + ggtitle(args[2])
 ggsave('genome_plot.png')
 ```
 
-#Challenge
+# Challenge
 
 Use the command line to run an R script that reads the Ecoli_metadata.csv file to plot the metadata and creates a png file.
 
