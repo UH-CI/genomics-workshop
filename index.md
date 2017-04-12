@@ -45,11 +45,11 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 | 2:30pm | [Agave/ToGo](#agave) |
 | 4:00pm | End |
 
-# Etherpad
+### Etherpad
 [https://public.etherpad-mozilla.org/p/UH-bioworkshop](https://public.etherpad-mozilla.org/p/UH-bioworkshop)
 
 
-###Workshop Materials
+### Workshop Materials
 
 - [Overview](00-overview.html)
 - [Introducing the dataset and questions](dataset/01-intro-to-dataset.html)
