@@ -73,6 +73,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Project Setup](wrangling/00-organization.md)
 - [Quality control of NGS data](wrangling/01-readQC.md)
 - [Automating a workflow](wrangling/02-automating-a-workflow.md)
+- Optional Advanced Exercise [Variant calling workflow](wrangling/03-variant-calling-workflow.html)
 
 **<a name="r"></a>R for data analysis and visualization**
 
