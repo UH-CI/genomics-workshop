@@ -241,11 +241,15 @@ $ java -jar ${TRIM}/trimmomatic.jar inputfile outputfile OPTION:VALUE...
 
 The next two arguments are input file and output file names.  These are then followed by a series of options. The specifics of how options are passed to a program differ depending on the program. You will always have to read the manual of a new program to learn which way it expects its command-line arguments to be composed.
 
+Lets make a directory for the trimmed results:
+```
+mkdir ~/lus/bio_workshop/results/fastqc_trimmed_results/
+```
 
 So, for the single fastq input file 'SRR098283.fastq', the command would be:
    ```bash
 $ cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
-$ java -jar ${TRIM}/trimmomatic.jar SE SRR098283.fastq ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+$ java -jar ${TRIM}/trimmomic.jar SE -threads 4 SRR098283.fastq ~/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 
 TrimmomaticSE: Started with arguments: SRR098283.fastq /home/seanbc/lus/bio_workshop/results/fastqc_trimmed_results/SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 Automatically using 16 threads
@@ -253,6 +257,9 @@ Quality encoding detected as phred33
 Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
 TrimmomaticSE: Completed successfully
 ```
+
+NOTE that since we are running on a single core on the HPC we limited the threads - this also prevents the memory from running out in most cases.
+
 So that worked and we have a new fastq file.
 
    ```bash
@@ -267,8 +274,14 @@ $ cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
 $ for infile in *.fastq
     >do
     >outfile=$infile\_trim.fastq
-    >java -jar ${TRIM}/trimmomatic.jar SE $infile ~/lus/bio_workshop/results/fastqc_trimmed_results/$outfile SLIDINGWINDOW:4:20 MINLEN:20
+    >java -jar ${TRIM}/trimmomatic.jar SE -threads 4 $infile ~/lus/bio_workshop/results/fastqc_trimmed_results/$outfile SLIDINGWINDOW:4:20 MINLEN:20
     >done
 ```
 
 Do you remember how the first word after "for" in the loop specifies a variable that is assigned the value of each item in the list in turn?  We can call it whatever we like.  This time it is called infile.  Note that the third line of this for loop is creating a second variable called outfile.  We assign it the value of $infile with '_trim.fastq' appended to it.  The '\' escape character is used so the shell knows that whatever follows \ is not part of the variable name $infile.  There are no spaces before or after the '='.
+
+
+In one line trimmomatic bash program to loop through all the sequences in the current directory
+```
+for infile in *.fastq; do outfile=$infile\_trim.fastq; java -jar ${TRIM}/trimmomatic.jar SE -threads 4 $infile ~/lus/bio_workshop/results/fastqc_trimmed_results/$outfile SLIDINGWINDOW:4:20 MINLEN:20; done
+```
