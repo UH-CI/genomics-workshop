@@ -124,7 +124,7 @@ Modules are how we install software for all users on HPC systems in a way that a
 ```
 module avail
 ```
-To be able to use one of the installed software packes you need to use:
+To be able to use one of the installed software packages you need to use:
 ```
 module load full-package-name
 ```
