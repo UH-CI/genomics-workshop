@@ -2,11 +2,22 @@ Quality Control of NGS Data
 ===================
 
 # Learning Objectives:
+* Learn how to launch and interactive sesson on the UH ITS HPC
 * Describe how the FastQ format encodes quality.
 * Evaluate a FastQC report.
 * Clean FastQ reads using Trimmommatic.
 * Employ for loops to automate operations on multiple files.
 
+## Interactive compute node session on the UH ITS HPC
+You are currently logged into the HPC and on a login node, but you want to run compute and that should only occur on a compute node.  So how do you make that happen? Do I SSH into a computer node? (The answer is NO) Why?
+
+We use an interactive session via the SLURM job scheduler to get access to a compute node in interactive mode.
+
+The below command will try and run an interactive session in the "bio_workshop" partition for 120 minutes on one node with 1 core and ~ 2GB of memory.  It runs the bash shell.  For this to work there has to be resources immediately available.  Additional information about srun can be found here [SLURM srun docs](http://www.schedmd.com/slurmdocs/srun.html)
+
+```
+  srun -I -p bio_workshop -c 1 -t 120 ---mem 2200 --pty /bin/bash
+```
 
 ## Details on the FASTQ format
 
