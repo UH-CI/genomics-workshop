@@ -1,4 +1,4 @@
-#Getting your project started
+# Getting your project started
 
 Project organization is one of the most important parts of a sequencing project, but is often overlooked in the excitement to get a first look at new data. While it's best to get yourself organized before you begin analysis,
 it's never too late to start.
@@ -15,7 +15,7 @@ Luckily, recording your computational experiments is even easier than recording 
 
 Your future self will thank you.
 
-##Exercise
+## Exercise
 
 In this exercise we will setup a filesystem for the project we will be using over the next few hours. We will also introduce you to some helpful shell commands/programs/tools:
 
@@ -108,5 +108,5 @@ From the nano screen, you should be able to use your cursor to navigate, type, a
 
 
 
-###References
+### References
 [A Quick Guide to Organizing Computational Biology Projects] (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
