@@ -121,7 +121,7 @@ create a files called mycomp.slum within your ~/lus/bio_workshop:
 # load appropriate modules for fastQC
 module load bioinfo/fastQC/0.11.4
 
-~/lus/bio_workshop/myscript.sh
+bash ~/lus/bio_workshop/myscript.sh
 
 ```
 
@@ -129,4 +129,10 @@ No submit the job to the SLURM Scheduler to run without you:
 ```
 sbatch mycomp.slurm
 ```
+
+The job should be submitted to SLURM and will show up in the job queue:
+```
+squeue -u yourusername
+```
+You should see you job running or waiting.
 ****
