@@ -105,4 +105,28 @@ named read_qc.sh
 
 3) Bonus points: Use something you learned earlier to save the output
 of the script to a file while it is running.
+
+4.) Submit the script to the SLURM Job scheduler
+
+create a files called mycomp.slum within your ~/lus/bio_workshop:
+```
+#!/bin/bash
+#SBATCH --time=1:00:00 # walltime, abbreviated by -t
+#SBATCH --nodes=1 # number of cluster nodes, abbreviated by -N
+#SBATCH -o slurm-%j.out-%N # name of the stdout, using the job number (%j) and the first node (%N)
+#SBATCH --ntasks=1 # number of MPI tasks, abbreviated by -n
+#SBATCH --mem=2200 #specify 2Gb of memory
+# additional information for allocated clusters
+#SBATCH --partition=community.q# partition, abbreviated by –p
+# load appropriate modules for fastQC
+module load bioinfo/fastQC/0.11.4
+
+~/lus/bio_workshop/myscript.sh
+
+```
+
+No submit the job to the SLURM Scheduler to run without you:
+```
+sbatch mycomp.slurm
+```
 ****
