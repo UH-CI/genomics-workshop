@@ -48,7 +48,7 @@ args <- commandArgs(TRUE)
 
 So if you call our script from the command line like so:
 ```
-./myscript.R Ecoli_metadata.csv
+./myscript.R Ecoli_metadata.csv "My Title"
 ```
 The args variable is a vector so to access the filename argument (Ecoli_metadata.csv) from the above we use:
 
@@ -70,9 +70,10 @@ args <- commandArgs(TRUE)
 filename <- args[1]
 metadata <- read.csv(filename)
 genome_size <- metadata$genome_size
-ggplot(metadata) +
+mygraph <-ggplot(metadata) +
   geom_point(aes(x = sample, y= genome_size, color = generation, shape = cit), size = rel(3.0)) +
   theme(axis.text.x = element_text(angle=45, hjust=1))
+mygraph + ggtitle(args[2])
 ggsave('genome_plot.png')
 ```
 
@@ -83,4 +84,4 @@ Use the command line to run an R script that reads the Ecoli_metadata.csv file t
 You on the UH ITS HPC you will need to load the R module prior to running the R script.
 
 * What do you need to define tell the system this is a R script
-* 
+*

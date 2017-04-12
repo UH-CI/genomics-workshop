@@ -31,8 +31,8 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 ### Workshop Timeline
 
 | 9:00am | Introduction |
-| 9:10am | The Dataset |
-| 9:20am | SRA Database |
+| 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
+| 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
 | 9:30am | Metadata and Data Organization |
 | 10:00am | Break - coffee and light refreshments provided |
 | 10:15am | Introduction to the command line |
