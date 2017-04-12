@@ -30,16 +30,18 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 ### Workshop Timeline
 
+| Start Time | Topic |
+|--------|--------------------------------------------------|
 | 9:00am | [Introduction](00-overview.html) |
 | 9:10am | [The Dataset](dataset/01-intro-to-dataset.html) |
 | 9:20am | [SRA Database](dataset/02-examining-sra-runtable.html) |
 | 9:30am | [Metadata and Data Organization](data-tidiness/01-tidiness.html) |
 | 10:00am | Break - coffee and light refreshments provided |
-| 10:15am | Introduction to the command line |
+| 10:15am | [Introduction to the command line ](shell/index.md) |
 | 11:00am | [Data Wrangling](#wrangling) |
 | Noon | Lunch  - on your own|
 | 1:00pm | [Introduction to R](#r) |
-| 2:15pm: | Break - coffee and light refreshments provided|
+| 2:15pm | Break - coffee and light refreshments provided|
 | 2:30pm | [Agave/ToGo](#agave) |
 | 4:00pm | End |
 
@@ -58,9 +60,10 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 
 **Introduction to the command line**
 
-- [Overview](shell/index.html)
-- [The file system](shell/01_the_filesystem.html)
-- [Searching files](shell/02_searching_files.html)
+- [Overview](shell/index.md)
+- [Connecting](shell/01_connecting.md)
+- [The file system](shell/02_the_filesystem.md)
+- [Searching files](shell/03_searching_files.md)
 
 **<a name="wrangling"></a>Data wrangling and processing**
 
