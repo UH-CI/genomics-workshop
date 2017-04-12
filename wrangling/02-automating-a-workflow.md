@@ -113,16 +113,16 @@ create a files called mycomp.slum within your ~/lus/bio_workshop:
 #!/bin/bash
 #SBATCH --time=1:00:00 # walltime, abbreviated by -t
 #SBATCH --nodes=1 # number of cluster nodes, abbreviated by -N
-#SBATCH -o slurm-%j.out-%N # name of the stdout, using the job number (%j) and the first node (%N)
 #SBATCH --ntasks=1 # number of MPI tasks, abbreviated by -n
 #SBATCH --mem=2200 #specify 2Gb of memory
 # additional information for allocated clusters
 #SBATCH --partition=community.q# partition, abbreviated by –p
-# load appropriate modules for fastQC
+#SBATCH -o example.out # Standard out goes to this file
+#SBATCH -e example.err # Standard err goes to this file
+#SBATCH --mail-user you@hawaii.edu # this is the email you wish to be notified at
 module load bioinfo/fastQC/0.11.4
 
 bash ~/lus/bio_workshop/myscript.sh
-
 ```
 
 No submit the job to the SLURM Scheduler to run without you:

@@ -170,7 +170,7 @@ $ bcftools view -bvcg $raw_bcf > $variants
 Filter the SNPs for the final output
 
 ```bash
-$ bcftools view $variants | /usr/share/samtools/vcfutils.pl varFilter - > $final_variants
+$ bcftools view $variants | vcfutils.pl varFilter - > $final_variants
 ```
 
 
