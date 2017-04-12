@@ -39,7 +39,7 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 | 11:00am | [Data Wrangling](#wrangling) |
 | Noon | Lunch  - on your own|
 | 1:00pm | [Introduction to R](#r) |
-| 2:1pm: | Break - coffee and light refreshments provided|
+| 2:15pm: | Break - coffee and light refreshments provided|
 | 2:30pm | [Agave/ToGo](#agave) |
 | 4:00pm | End |
 
