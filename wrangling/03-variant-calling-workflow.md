@@ -72,7 +72,7 @@ $ genome=data/ref_genome/ecoli_rel606.fasta
 We need to index the reference genome for bwa and samtools. bwa and samtools are programs that are pre-installed on the HPC but you need to use the 'module load' command to load the appropriate version of each tool - (you can use 'module avail' to list the available modules and then load the correct one).
 
 ```bash
-module load prod/samtools1.2 bioinfo/bwa/0.7.15 
+module load prod/samtools1.2 bioinfo/bwa/0.7.15 prod/bcftools-1.2
 bwa index $genome
 samtools faidx $genome
 ```
@@ -176,5 +176,5 @@ $ bcftools view $variants | /usr/share/samtools/vcfutils.pl varFilter - > $final
 
 ****
 **Exercise**
-Run the script https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/run_variant_calling.sh
+Convert the above commands into a script
 ****
