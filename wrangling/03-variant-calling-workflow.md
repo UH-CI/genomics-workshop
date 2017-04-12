@@ -1,6 +1,6 @@
 # Lesson
 
-Automating a workflow
+Variant Calling - Automating a workflow
 ===================
 
 Learning Objectives:
@@ -11,13 +11,12 @@ Learning Objectives:
 * Use a For loop from the previous lesson to help automate repetitive tasks
 * Group a series of sequential commands into a script to automate a workflow
 
-To get started with this lesson, we will need to grab some data from an outside
-server using `wget` on the command line.
+To get started with this lesson, we first need to be in an interactive session on the HPC so we are not running any computation on the login node. Next we will need to grab some data from an outside server using `wget` on the command line.
 
-Make sure you are in the dc_workshop directory first
+Make sure you are in the ~/lus/bio_workshop directory first (or a directory on your ~/lus so you are using the appropriate scratch storage on the HPC)
 
 ```bash
-$ cd ~/dc_workshop
+$ cd ~/lus/bio_workshop
 $ wget http://reactomerelease.oicr.on.ca/download/archive/variant_calling.tar.gz
 ```
 
@@ -60,7 +59,7 @@ The first command is to change to our working directory
 so the script can find all the files it expects
 
 ```bash
-$ cd ~/dc_workshop/variant_calling
+$ cd ~/lus/bio_workshop/variant_calling
 ```
 
 Assign the name/location of our reference genome
@@ -70,10 +69,10 @@ to a variable ($genome)
 $ genome=data/ref_genome/ecoli_rel606.fasta
 ```
 
-We need to index the reference genome for bwa and samtools. bwa
-and samtools are programs that are pre-installed on our server.
+We need to index the reference genome for bwa and samtools. bwa and samtools are programs that are pre-installed on the HPC but you need to use the 'module load' command to load the appropriate version of each tool - (you can use 'module avail' to list the available modules and then load the correct one).
 
 ```bash
+module load prod/samtools1.2 bioinfo/bwa/0.7.15 
 bwa index $genome
 samtools faidx $genome
 ```

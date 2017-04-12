@@ -52,7 +52,7 @@ Next, try making the following directories using the ``mkdir`` command
 Verify that you have created the directories;
 
 ```bash
-$ ls -R bio_workshop
+$ ls -R ~/lus/bio_workshop
 ```
 
 if you have created these directories, you should get the following output from that command:

@@ -111,7 +111,18 @@ The main functions of FastQC are
     mkdir bio_workshop/results/fastqc_untrimmed_reads
     cd bio_workshop/results/fastqc_untrimmed_reads
     ```
-To run the fastqc program, we need to load the software module on the UH ITS HPC ``module load bioinfo/fastQC/0.11.4``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard to specify the output directory we use the -o flag (otherwise fastQC will put the results in the same directory as the fastq files it is analyzing).
+To run the fastqc program, we need to load the software module on the UH ITS HPC.
+
+Modules are how we install software for all users on HPC systems in a way that allows multiple versions to be available without colliding.  To see what software is installed for everyone on the HPC use:
+```
+module avail
+```
+To be able to use one of the installed software packes you need to use:
+```
+module load full-package-name
+```
+
+ To load the fastQC software use ``module load bioinfo/fastQC/0.11.4``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard to specify the output directory we use the -o flag (otherwise fastQC will put the results in the same directory as the fastq files it is analyzing).
 2. Run FastQC on all fastq files in the directory
 
     ```bash
