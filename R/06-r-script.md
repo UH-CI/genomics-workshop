@@ -75,3 +75,12 @@ ggplot(metadata) +
   theme(axis.text.x = element_text(angle=45, hjust=1))
 ggsave('genome_plot.png')
 ```
+
+#Challenge
+
+Use the command line to run an R script that reads the Ecoli_metadata.csv file to plot the metadata and creates a png file.
+
+You on the UH ITS HPC you will need to load the R module prior to running the R script.
+
+* What do you need to define tell the system this is a R script
+* 
