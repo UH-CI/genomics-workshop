@@ -1,84 +1,15 @@
 
-# The Shell
+# Starting with the shell
 
-## What is the shell?
+We will spend most of our time learning about the basics of the shell by 
+manipulating some experimental data.  We're going to be working with data on our 
+remote server.
 
-The *shell* is a program that presents a command line interface
-which allows you to control your computer using commands entered
-with a keyboard instead of controlling graphical user interfaces
-(GUIs) with a mouse/keyboard combination.
-
-There are many reasons to learn about the shell.
-
-* For most bioinformatics tools, you have to use the shell. There is no
-graphical interface. If you want to work in metagenomics or genomics you're
-going to need to use the shell.
-* The shell gives you *power*. The command line gives you the power to do your work more efficiently and
-more quickly.  When you need to do things tens to hundreds of times,
-knowing how to use the shell is transformative.
-* To use remote computers or cloud computing, you need to use the shell.
-
-
-![Automation](../img/gvng.jpg)
-
-  Unix is user-friendly. It's just very selective about who its friends are.
-
-
-Today we're going to go through how to access Unix/Linux and some of the basic
-shell commands.
-
-## Information on the shell
-
-shell cheat sheets:<br>
-* [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
-* [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
-
-Explain shell - a web site where you can see what the different components of
-a shell command are doing.  
-* [http://explainshell.com](http://explainshell.com)
-* [http://www.commandlinefu.com](http://www.commandlinefu.com)
-
-
-## How to access the shell
-
-The shell is already available on Mac and Linux. For Windows, you'll
-have to download a separate program.
-
-
-Mac
----  
-On Mac the shell is available through Terminal  
-Applications -> Utilities -> Terminal  
-Go ahead and drag the Terminal application to your Dock for easy access.
-
-Windows
--------
-For Windows, we're going to be using gitbash.  
-Download and install [gitbash](http://msysgit.github.io);
-Open up the program.
-
-Linux  
------
-The shell is available by default when you connect to your AWS instance.  You should be set.
-
-
-
-## Starting with the shell
-
-We will spend most of our time learning about the basics of the shell
-by manipulating some experimental data.
-
-Now we're going to download the data for the tutorial. For this you'll need
-internet access, because you're going to get it off the web.  
-
-We're going to be working with data on our remote server.
-
-
-After loggin on, let's check out the example data.
+After logging in, let's check out the example data.
 
 Let's go into the sample data  directory
 
-      cd dc_sample data
+      cd /lus/scratch/workshop/dc_sampledata_lite
 
 'cd' stands for 'change directory'
 
@@ -86,14 +17,14 @@ Let's see what is in here. Type
       ls
 
 You will see
-    sra_metadata  untrimmed_fastq
+    dc_docs  fastqc_reports  ref_genome  sra_metadata  trimmed_fastq  untrimmed_fastq  variant_calling
 
 ls stands for 'list' and it lists the contents of a directory.
 
-There are two items listed.  What are they? We can use a command line argumant with 'ls' to get more information.
+There are seven items listed.  What are they? We can use a command line argumant with 'ls' to get more information.
 
       ls -F
-      sra_metadata/  untrimmed_fastq/
+      dc_docs/  fastqc_reports/  ref_genome/  sra_metadata/  trimmed_fastq/  untrimmed_fastq/  variant_calling/
 
 Anything with a "/" after it is a directory.  
 Things with a "*" after them are programs.  
@@ -102,8 +33,13 @@ If there are no decorations, it's a file.
 You can also use the command
 
     ls -l
-    drwxr-x--- 2 dcuser sudo 4096 Jul 30 11:37 sra_metadata
-    drwxr-xr-x 2 dcuser sudo 4096 Jul 30 11:38 untrimmed_fastq
+    drwxr-xr-x 4 root root 4096 Apr 11 19:04 dc_docs
+    drwxr-xr-x 4 root root 4096 Apr 11 19:07 fastqc_reports
+    drwxr-xr-x 2 root root 4096 Apr 11 19:05 ref_genome
+    drwxr-xr-x 2 root root 4096 Apr 11 19:07 sra_metadata
+    drwxr-xr-x 2 root root 4096 Apr 11 19:05 trimmed_fastq
+    drwxr-xr-x 2 root root 4096 Apr 11 19:07 untrimmed_fastq
+    drwxr-xr-x 5 root root 4096 Apr 11 19:06 variant_calling
 
 to see whether items in a directory are files or directories. `ls -l` gives a lot more
 information too.
@@ -112,9 +48,9 @@ Let's go into the untrimmed_fastq directory and see what is in there.
 
     cd untrimmed_fastq
     ls -F
-    SRR097977.fastq  SRR098026.fastq
+    SRR097977.fastq  SRR098026.fastq  SRR098027.fastq  SRR098028.fastq  SRR098281.fastq  SRR098283.fastq
 
-There are two items in this directory with no trailing slash, so they are files.
+There are six items in this directory with no trailing slash, so they are files.
 
 
 ## Arguments
@@ -158,10 +94,10 @@ data in the place the program expects it to be.
 
 Let's practice moving around a bit.
 
-We're going to work in that `dc_sample_data` directory.
+We're going to work in that `dc_sample_data_lite` directory.
 
 First we did something like go to the folder of our username. Then we opened
-'dc_sample_data' then 'data'
+'dc_sample_data_lite' then 'untrimmed_fastq'
 
 Let's draw out how that went.
 
@@ -171,7 +107,7 @@ This is called a hierarchical file system structure, like an upside down tree
 with root (/) at the base that looks like this.
 
 
-![Unix](../img/Slide1.jpg)
+![Unix](../img/filetree.png)
 
 That (/) at the base is often also called the 'top' level.
 
@@ -186,7 +122,7 @@ Type
 
 This puts you in your home directory. This folder here.
 
-Now using `cd` and `ls`, go in to the 'dc_sample_data' directory and list its contents.
+Now using `cd` and `ls`, go in to the 'dc_sample_data_lite' directory and list its contents.
 
 Let's also check to see where we are. Sometimes when we're wandering around
 in the file system, it's easy to lose track of where we are and get lost.
@@ -198,7 +134,7 @@ If you want to know what directory you're currently in, type
 This stands for 'print working directory'. The directory you're currently working in.
 
 What if we want to move back up and out of the 'data' directory? Can we just
-type `cd dc_sample_data`? Try it and see what happens.
+type `cd /lus/scratch/workshop/dc_sample_data_lite`? Try it and see what happens.
 
 To go 'back up a level' we need to use `..`
 
@@ -206,14 +142,14 @@ Type
 
      cd ..
 
-Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sample_data'
+Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sample_data_lite'
 directory. `..` means go back up a level.
 
 * * * *
 **Exercise**
 
-Now we're going to try a hunt.  Find a hidden directory in dc_sample_data list its contents
-and file the text file in there.  What is the name of the file?
+Now we're going to try a hunt.  Find a hidden directory in dc_sample_data_lite. List its contents
+and find the text file in there.  What is the name of the file?
 
 Hint: hidden files and folders in unix start with '.', for example .my_hidden_directory
 * * * *
@@ -233,18 +169,12 @@ Type:
 
 Then enter the command:
 
-    ls dc_sample_data
+    ls /lus/scratch/workshop/dc_sample_data_lite
 
-This will list the contents of the `dc_sample_data` directory without
+This will list the contents of the `dc_sample_data_lite` directory without
 you having to navigate there.
 
-The `cd` command works in a similar way. Try entering:
-
-    cd
-    cd dc_sample_data/untrimmed_fastq
-
-and you will jump directly to `untrimmed_fastq` without having to go through
-the intermediate directory.
+As we have seen, the `cd` command works in a similar way. 
 
 ****
 **Exercise**
@@ -259,10 +189,10 @@ lot of time. When you start typing out the name of a directory, then
 hit the tab key, the shell will try to fill in the rest of the
 directory name. For example, type `cd` to get back to your home directy, then enter:
 
-    cd dc_<tab>
+    cd /lus/scratch/workshop/dc_<tab>
 
 The shell will fill in the rest of the directory name for
-`dc_sample_data`. Now go to dc_sample_data/untrimmed_fastq
+`dc_sample_data_lite. Now go to dc_sample_data_lite/untrimmed_fastq
 
     ls SR<tab><tab>
 
@@ -287,9 +217,9 @@ hierarchy. The full path tells you where a directory is in that
 hierarchy. Navigate to the home directory. Now, enter the `pwd`
 command and you should see:
 
-    /home/dcuser
+    /home/username
 
-which is the full name of your home directory. This tells you that you
+which is the full name of your home directory, whatever your username is. This tells you that you
 are in a directory called `dcuser`, which sits inside a directory called
 `home` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
@@ -298,16 +228,14 @@ directory in `home` which is a directory in `/`.
 
 Now enter the following command:
 
-    cd /home/dcuser/dc_sample_data/.hidden
+    cd /lus/scratch/workshop
 
-This jumps to `.hidden`. Now go back to the home directory (cd). We saw
-earlier that the command:
+This jumps to `workshop`. Next, type the command:
 
-    cd dc_sample_data/.hidden
+    cd dc_sample_data_lite/.hidden
 
-had the same effect - it took us to the `hidden` directory. But,
-instead of specifying the full path
-(`/home/dcuser/dc_sample_data/data`), we specified a *relative path*. In
+to go to the `hidden` directory. But, instead of specifying the full path
+(`/lus/scratch/workshop/dc_sample_data_lite/.hidden`), we specified a *relative path*. In
 other words, we specified the path relative to our current
 directory. A full path always starts with a `/`. A relative path does
 not.
@@ -344,36 +272,35 @@ How can you tell these are programs rather than plain files?
 
 There are some shortcuts which you should know about. Dealing with the
 home directory is very common. So, in the shell the tilde character,
-""~"", is a shortcut for your home directory. Navigate to the `dc_sample_data`
+""~"", is a shortcut for your home directory. Navigate to your home
 directory:
 
     cd
-    cd dc_sample_data
+    pwd
 
 Then enter the command:
 
-    ls ~
+    ls -a ~
 
-This prints the contents of your home directory, without you having to
+This prints the contents of your home directory (including hidden files), without you having to
 type the full path. The shortcut `..` always refers to the directory
 above your current directory. Thus:
 
     ls ..
 
-prints the contents of the `/home/dcuser/dc_sample_data`. You can chain
+prints the contents of the `/home`. You can chain
 these together, so:
 
     ls ../../
 
-prints the contents of `/home/dcuser` which is your home
-directory. Finally, the special directory `.` always refers to your
-current directory. So, `ls`, `ls .`, and `ls ././././.` all do the
-same thing, they print the contents of the current directory. This may
-seem like a useless shortcut right now, but we'll see when it is
-needed in a little while.
+prints the contents of the root directory`/`. Finally, the special 
+directory `.` always refers to your current directory. So, `ls`, `ls .`, and 
+`ls ././././.` all do the same thing, they print the contents of the current 
+directory. This may seem like a useless shortcut right now, but we'll see when 
+it is needed in a little while.
 
-To summarize, while you are in the `shell` directory, the commands
-`ls ~`, `ls ~/.`, `ls ../../`, and `ls /home/dcuser` all do exactly the
+To summarize, while you are in your home directory, the commands `ls`,
+`ls ~`, `ls ~/.`, `ls ../username/`, and `ls /home/username` all do exactly the
 same thing. These shortcuts are not necessary, they are provided for
 your convenience.
 
@@ -385,8 +312,8 @@ We want to be able to look at these files and do some things with them.
 
 ### Wild cards
 
-Navigate to the `~/dc_sample_data/data/untrimmed_fastq` directory. This
-directory contains our FASTQ files.
+Navigate to the `/lus/scratch/workshop/dc_sample_data_lite/data/untrimmed_fastq` 
+directory. This directory contains our FASTQ files.
 
 The `*` character is a shortcut for "everything". Thus, if
 you enter `ls *`, you will see all of the contents of a given
@@ -487,17 +414,17 @@ This prints out the all the contents of the the `SRR098026.fastq` to the screen.
 * * * *
 **Exercises**
 
-1.  Print out the contents of the `~/dc_sample_data/untrimmed_fastq/SRR097977.fastq`
+1.  Print out the contents of the `/lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq/SRR097977.fastq`
     file. What does this file contain?
 
 2.  From your home directory, without changing directories,
     use one short command to print the contents of all of the files in
-    the `/home/dcuser/dc_sample_data/untrimmed_fastq` directory.
+    the `/lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq` directory.
 
 * * * *
 
 
-    cd ~/dc_sample_data/untrimmed_fastq
+    cd /lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq
 
 `cat` is a terrific program, but when the file is really big, it can
 be annoying to use. The program, `less`, is useful for this
@@ -570,25 +497,26 @@ so let's make a copy to work with.
 Lets copy the file using the `cp` command. The `cp`
 command backs up the file. Navigate to the `data` directory and enter:
 
-    cp SRR098026.fastq SRR098026-copy.fastq
-    ls -F
-    SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq
+    cp SRR098026.fastq ~/SRR098026-copy.fastq
+    ls ~
+    SRR098026-copy.fastq
+    ls
+    SRR097977.fastq  SRR098026.fastq  SRR098027.fastq  SRR098028.fastq  SRR098281.fastq  SRR098283.fastq
 
-Now SRR098026-copy.fastq has been created as a copy of SRR098026.fastq
+Now SRR098026-copy.fastq has been created in your home directory as a copy of SRR098026.fastq
 
 Let's make a `backup` directory where we can put this file.
 
 The `mkdir` command is used to make a directory. Just enter `mkdir`
 followed by a space, then the directory name.
 
-    mkdir backup
+    mkdir ~/backup
 
 We can now move our backed up file in to this directory. We can
 move files around using the command `mv`. Enter this command:
 
-    mv *-copy.fastq backup
-    ls -al backup
-    total 52
+    mv ~/*-copy.fastq ~/backup
+    ls -al ~/backup
     drwxrwxr-x 2 dcuser dcuser  4096 Jul 30 15:31 .
     drwxr-xr-x 3 dcuser dcuser  4096 Jul 30 15:31 ..
     -rw-r--r-- 1 dcuser dcuser 43421 Jul 30 15:28 SRR098026-copy.fastq
@@ -596,13 +524,14 @@ move files around using the command `mv`. Enter this command:
 The `mv` command is also how you rename files. Since this file is so
 important, let's rename it:
 
-    cd backup
+    cd ~/backup
     mv SRR098026-copy.fastq SRR098026-copy.fastq_DO_NOT_TOUCH!
     ls
     SRR098026-copy.fastq_DO_NOT_TOUCH!
 
     Finally, we decided this was silly and want to start over.
 
+    cd ..
     rm backup/SRR*
 
 The `rm` file permanently removes the file. Be careful with this command. It doesn't
@@ -617,7 +546,7 @@ Do the following:
 
 1.  Create a backup of your fastq files
 2.  Create a backup directory
-3.  Copr your backup files there
+3.  Copy your backup files there
 
 * * * *
 
@@ -662,3 +591,6 @@ Open 'awesome.sh' and add "echo AWESOME!" after the grep command and save the fi
 We're going to come back and use this file in just a bit.
 
 ***
+
+
+[Back](index.md) | [Next: Navigating the Filesystem](03_searching_files.md)
