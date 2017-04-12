@@ -1,11 +1,6 @@
 
 # The Shell
 
-Author: Sheldon McKay
-
-Adapted from the lesson by Tracy Teal.
-Original contributors:
-Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
 
 ## Searching files
 
@@ -111,7 +106,7 @@ learn to become proficient with the pipe and redirection operators:
 Finally, let's use the new tools in our kit and a few new ones to example our SRA metadata file.
 
     cd
-    cd dc_sample_data/
+    cd /lus/scratch/workshop/dc_sample_data_lite/sra_metadata
 
 Let's ask a few questions about the data
 
@@ -228,3 +223,14 @@ the command line, automate something you don't really need to automate.
 **Permissions**
 
 **Chaining commands together**
+
+## Attribution
+
+Author: Sheldon McKay
+
+Adapted from the lesson by Tracy Teal.
+Original contributors:
+Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
+
+
+[Back](index.md)
