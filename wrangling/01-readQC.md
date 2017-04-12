@@ -1,7 +1,3 @@
-i# Lesson QC of Sequence Read Data
-
-add loading modules
-
 Quality Control of NGS Data
 ===================
 
