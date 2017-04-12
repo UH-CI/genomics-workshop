@@ -104,7 +104,7 @@ The main functions of FastQC are
 * Offline operation to allow automated generation of reports without running the interactive application
 
 
-## Running FASTQC Excersie
+## Running FASTQC Exercise
 ### A. Stage your data
 
 1. Create a working directory for your analysis
@@ -154,6 +154,7 @@ $ ls
 $ unzip *.zip
 ```
 Did it work? No, because 'unzip' expects to get only one zip file.  Welcome to the real world. We *could* do each file, one by one, but what if we have 500 files?  There is a smarter way. We can save time by using a simple shell 'for loop' to iterate through the list of files in *.zip. After you type the first line, you will get a special '>' prompt to type next next lines. You start with 'do', then enter your commands, then end with 'done' to execute the loop.
+
 3. Build a ``for`` loop to unzip the files
 
    ```bash
