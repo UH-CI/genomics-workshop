@@ -86,5 +86,8 @@ In this workshop we're using data from Blount et al 2012 paper from Dr. Richard 
 - [Scripting With R](R/06-r-script.html)
 
 **<a name="agave"></a>Agave/ToGo**
+- [Introduction to Agave ToGO](agave/index.md)
+- [Registering Systems](agave/systems.md)
+- [Creating Apps](agave/rscript-app.md)
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
