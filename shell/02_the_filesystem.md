@@ -21,7 +21,7 @@ You will see
 
 ls stands for 'list' and it lists the contents of a directory.
 
-There are seven items listed.  What are they? We can use a command line argumant with 'ls' to get more information.
+There are seven items listed.  What are they? We can use a command line argument with 'ls' to get more information.
 
       ls -F
       dc_docs/  fastqc_reports/  ref_genome/  sra_metadata/  trimmed_fastq/  untrimmed_fastq/  variant_calling/
@@ -94,10 +94,10 @@ data in the place the program expects it to be.
 
 Let's practice moving around a bit.
 
-We're going to work in that `dc_sample_data_lite` directory.
+We're going to work in that `dc_sampledata_lite` directory.
 
 First we did something like go to the folder of our username. Then we opened
-'dc_sample_data_lite' then 'untrimmed_fastq'
+'dc_sampledata_lite' then 'untrimmed_fastq'
 
 Let's draw out how that went.
 
@@ -122,7 +122,7 @@ Type
 
 This puts you in your home directory. This folder here.
 
-Now using `cd` and `ls`, go in to the 'dc_sample_data_lite' directory and list its contents.
+Now using `cd` and `ls`, go in to the 'dc_sampledata_lite' directory and list its contents.
 
 Let's also check to see where we are. Sometimes when we're wandering around
 in the file system, it's easy to lose track of where we are and get lost.
@@ -134,7 +134,7 @@ If you want to know what directory you're currently in, type
 This stands for 'print working directory'. The directory you're currently working in.
 
 What if we want to move back up and out of the 'data' directory? Can we just
-type `cd /lus/scratch/workshop/dc_sample_data_lite`? Try it and see what happens.
+type `cd /lus/scratch/workshop/dc_sampledata_lite`? Try it and see what happens.
 
 To go 'back up a level' we need to use `..`
 
@@ -142,13 +142,13 @@ Type
 
      cd ..
 
-Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sample_data_lite'
+Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sampledata_lite'
 directory. `..` means go back up a level.
 
 * * * *
 **Exercise**
 
-Now we're going to try a hunt.  Find a hidden directory in dc_sample_data_lite. List its contents
+Now we're going to try a hunt.  Find a hidden directory in dc_sampledata_lite. List its contents
 and find the text file in there.  What is the name of the file?
 
 Hint: hidden files and folders in unix start with '.', for example .my_hidden_directory
@@ -169,9 +169,9 @@ Type:
 
 Then enter the command:
 
-    ls /lus/scratch/workshop/dc_sample_data_lite
+    ls /lus/scratch/workshop/dc_sampledata_lite
 
-This will list the contents of the `dc_sample_data_lite` directory without
+This will list the contents of the `dc_sampledata_lite` directory without
 you having to navigate there.
 
 As we have seen, the `cd` command works in a similar way. 
@@ -192,7 +192,7 @@ directory name. For example, type `cd` to get back to your home directy, then en
     cd /lus/scratch/workshop/dc_<tab>
 
 The shell will fill in the rest of the directory name for
-`dc_sample_data_lite. Now go to dc_sample_data_lite/untrimmed_fastq
+`dc_sampledata_lite. Now go to dc_sampledata_lite/untrimmed_fastq
 
     ls SR<tab><tab>
 
@@ -232,10 +232,10 @@ Now enter the following command:
 
 This jumps to `workshop`. Next, type the command:
 
-    cd dc_sample_data_lite/.hidden
+    cd dc_sampledata_lite/.hidden
 
 to go to the `hidden` directory. But, instead of specifying the full path
-(`/lus/scratch/workshop/dc_sample_data_lite/.hidden`), we specified a *relative path*. In
+(`/lus/scratch/workshop/dc_sampledata_lite/.hidden`), we specified a *relative path*. In
 other words, we specified the path relative to our current
 directory. A full path always starts with a `/`. A relative path does
 not.
@@ -312,7 +312,7 @@ We want to be able to look at these files and do some things with them.
 
 ### Wild cards
 
-Navigate to the `/lus/scratch/workshop/dc_sample_data_lite/data/untrimmed_fastq` 
+Navigate to the `/lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq` 
 directory. This directory contains our FASTQ files.
 
 The `*` character is a shortcut for "everything". Thus, if
@@ -414,17 +414,17 @@ This prints out the all the contents of the the `SRR098026.fastq` to the screen.
 * * * *
 **Exercises**
 
-1.  Print out the contents of the `/lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq/SRR097977.fastq`
+1.  Print out the contents of the `/lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq/SRR097977.fastq`
     file. What does this file contain?
 
 2.  From your home directory, without changing directories,
     use one short command to print the contents of all of the files in
-    the `/lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq` directory.
+    the `/lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq` directory.
 
 * * * *
 
 
-    cd /lus/scratch/workshop/dc_sample_data_lite/untrimmed_fastq
+    cd /lus/scratch/workshop/dc_sampledata_lite/untrimmed_fastq
 
 `cat` is a terrific program, but when the file is really big, it can
 be annoying to use. The program, `less`, is useful for this
